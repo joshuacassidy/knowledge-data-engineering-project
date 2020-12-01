@@ -1,0 +1,16 @@
+#What properties does host 234243 have in the same county as the Shopping Activity?
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?accomadationName ?hostName ?activity{
+	?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Shopping> .
+    <http://foo.example/ActivitiesTypes/Shopping> <http://www.semanticweb.org/ontologies/2020/10/activityTypeName> ?activity .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation . 
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation . 
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationName> ?accomadationName . 
+    ?hostId <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> ?accomodationId .
+    ?hostId <http://www.semanticweb.org/ontologies/2020/10/hostId> "234243" .
+    ?hostId <http://www.semanticweb.org/ontologies/2020/10/hostName> ?hostName
+}GROUP BY ?accomadationName ?hostName ?activity
