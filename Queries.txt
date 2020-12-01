@@ -1,0 +1,126 @@
+##1 - Activities Description
+PREFIX activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?x WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/accName> ?x
+}
+LIMIT 111
+
+
+
+
+##2 - Ratings
+PREFIX ratings:  <http://www.semanticweb.org/ontologies/2020/10/accRating>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?accRatingAccuracy WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/countyName> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/accRatingAccuracy> ?accRatingAccuracy.  
+}
+
+##3 - Acceptance Rate
+PREFIX host_acceptancerate:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?acceptancerate WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> ?acceptancerate
+}
+
+##4 - OwnerHost
+PREFIX SuperHost:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?SuperHost WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/isSuperHost> ?SuperHost
+}
+
+
+##5 - HostURL
+PREFIX Host:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?HostURL WHERE{
+    ?t
+   <http://www.semanticweb.org/ontologies/2020/10/hostURL> ?HostURL .
+}
+
+##6 - Most Activity
+PREFIX MostActivity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?MostActivity ?airbnblocation ?activityName WHERE{
+#    ?s <http://www.semanticweb.org/ontologies/2020/10/activityTypeActivityID> ?ActivityID.
+    ?t <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Donegal".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?activityName <http://www.semanticweb.org/ontologies/2020/10/activityTypeName> ?MostActivity
+}
+
+##7 - Room Type
+PREFIX RoomType:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?RoomType ?activity ?airbnblocation WHERE{
+    ?activity <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://foo.example/Location/Dublin>.
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/roomType> ?RoomType .
+}
+
+##8 - Accommodation Rating
+PREFIX AccRating:<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?RoomType WHERE{
+    ?activity <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://foo.example/Location/Dublin>.
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/roomType> ?RoomType .
+}
+LIMIT 111
+
+##9 - Users Review
+PREFIX Review:<http://www.semanticweb.org/ontologies/2020/10/Review>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/ActivityType>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?UserReviewDate WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated> ?UserReviewDate .
+}
+
+##10 - Type of Property
+PREFIX property:
+<http://www.semanticweb.org/ontologies/2020/10/PropertyType>
+PREFIX activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?propertyType WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/propertyType> ?propertyType
+#  ?s <http://www.semanticweb.org/ontologies/2020/10/activityTypeName> ?MostActivity
+}
+

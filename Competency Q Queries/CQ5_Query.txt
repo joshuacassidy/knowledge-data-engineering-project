@@ -1,0 +1,15 @@
+#Q5. What is the usual respose time from host from the following location where there is most activity 'Dublin', 'Clare', 'Donegal', 'Meath'
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?hostResponseTime ?ActivityLocation WHERE{
+    ?Time  <http://www.semanticweb.org/ontologies/2020/10/hostResponseTime> ?hostResponseTime .
+{SELECT DISTINCT ?ActivityLocation (COUNT(?hostResponseTime) as ?avgResponseTime) WHERE{
+      ?HostURL   <http://www.semanticweb.org/ontologies/2020/10/hostURL> ?o.
+      ?Time  <http://www.semanticweb.org/ontologies/2020/10/hostResponseTime> ?hostResponseTime.
+      ?location  <http://www.semanticweb.org/ontologies/2020/10/activityLocation> ?ActivityLocation
+}GROUP BY  ?ActivityLocation ORDER BY DESC(?avgResponseTime)LIMIT 10}
+     FILTER (?hostResponseTime != "N/A")
+}GROUP BY ?hostResponseTime ?ActivityLocation ORDER BY DESC(COUNT(?hostResponseTime)) LIMIT 4

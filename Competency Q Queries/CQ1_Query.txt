@@ -1,0 +1,12 @@
+#Q1. List the all different Activity Names which are near Airbnbs in Dublin
+PREFIX Activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT ?ActivityName ?airbnbLocation WHERE{
+    ?s <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?location <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbLocation <http://www.semanticweb.org/ontologies/2020/10/accName> ?ActivityName
+}
+GROUP BY ?ActivityName ?airbnbLocation ORDER BY (?ActivityName)

@@ -1,0 +1,16 @@
+#Q6. List "Fishing", "Shopping", "Tour" Activities there are near Airbnbs in Dublin.
+PREFIX MostActivity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX County:  <http://www.semanticweb.org/ontologies/2020/10/Location>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?Activities ?airbnblocation WHERE{
+?activityType
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeName> ?Activities .
+    ?s <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+   ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+   <http://foo.example/Location/Dublin>.
+    FILTER (?Activities in ("Fishing", "Shopping", "Tour")) 
+}
+GROUP BY ?Activities ?airbnblocation
+LIMIT 100

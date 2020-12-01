@@ -1,0 +1,13 @@
+#Q3. For which host there are Above 90 host acceptance rate in 'IRELAND' country where there are most tourists activities.
+PREFIX host_acceptancerate: <http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?acceptanceRate ?hostID ?ActivityLocation WHERE{      
+    ?hostID <http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> ?acceptanceRate.
+    ?location  <http://www.semanticweb.org/ontologies/2020/10/activityLocation> ?ActivityLocation
+    FILTER (?acceptanceRate > "90")
+}
+GROUP BY ?acceptanceRate ?hostID ?ActivityLocation ORDER BY DESC(?acceptanceRate)
+LIMIT 200

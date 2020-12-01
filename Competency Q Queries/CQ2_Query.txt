@@ -1,0 +1,15 @@
+#Q2. Near 'Galway' county what are the Activities connected to top airbnbs Ratings.  
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX ratings:  <http://www.semanticweb.org/ontologies/2020/10/accRating>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?accRatingAccuracy ?activitylocation WHERE{
+    ?t <http://www.semanticweb.org/ontologies/2020/10/countyName> "Galway".
+    ?activitylocation <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn>
+    <http://foo.example/Location/Galway>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/accRatingAccuracy> ?accRatingAccuracy.  
+    FILTER (?accRatingAccuracy = "10")
+}
+GROUP BY ?activitylocation ?accRatingAccuracy ORDER BY (?accRatingAccuracy)
+LIMIT 25

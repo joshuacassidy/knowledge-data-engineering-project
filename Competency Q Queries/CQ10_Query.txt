@@ -1,0 +1,17 @@
+#Q10. Where are the most Activity in 'Dublin' and what are the prices of Airbnbs
+PREFIX Availability:<http://www.semanticweb.org/ontologies/2020/10/Availability>
+PREFIX MostActivity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?ActivityName ?airbnbName ?url ?AvailablePrice WHERE{
+    ?url <http://www.semanticweb.org/ontologies/2020/10/activityWebsite> ?ActivityWebsite .
+    ?price <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice> ?AvailablePrice .
+    ?s <http://www.semanticweb.org/ontologies/2020/10/activityLocation> "Dublin".
+    ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+    <http://foo.example/Location/Dublin>.
+    ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/accName> ?ActivityName
+    FILTER (?AvailablePrice > "100")
+}
+#GROUP BY ?ActivityName ?airbnbName ?url ?AvailablePrice ORDER BY (?AvailablePrice)
+LIMIT 200

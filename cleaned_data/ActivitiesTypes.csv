@@ -1,0 +1,104 @@
+ActivityTypeID,ActivityType
+1,Activity Operator
+2,Tour
+3,Food and Drink
+4,Restaurant
+5,Pubs and Bar
+6,Seafood
+7,Vegetarian
+8,Covid Safety Charter
+16,Historic Houses and Castle
+17,Venue
+18,Music
+19,Craft
+20,Shopping
+21,Art Gallery
+24,Museums and Attraction
+27,Food Shops
+32,Walking
+60,Fishing
+61,Angling
+65,Shopping Centres and Department Store
+71,Fine Dining
+84,Surfing
+97,Discovery Point
+100,Pitch And Putt
+101,General
+102,Pitch and Putt
+106,Gardens
+107,Garden
+113,Cafe
+118,Photography
+119,Learning
+121,Church Abbey
+122,Monastery
+123,Churches
+124,Abbeys and Monastery
+125,Ruins
+131,Golf
+132,Golf Course
+134,Tracing Your Ancestors
+141,Natural Landscape
+152,Cycling
+153,Kitesurfing
+154,Windsurfing
+169,Bike Rental
+173,Island
+174,Offshore Island
+177,Zoos and Aquarium
+189,Bird Watching
+190,Nature and Wildlife
+191,Climbing
+197,Horse Riding
+198,Equestrian
+199,Kayaking
+203,Swimming
+204,Swimming Pools and Water Park
+209,Beach
+216,Adventure Park
+218,Pampering
+219,Health Farm
+220,Spa and Wellness
+221,Specialised Retreat
+222,Spa
+232,Sports Venues
+240,Movies
+241,Cinema
+256,Sailing
+262,Day Tour
+333,Coach
+334,Road
+335,Transport
+347,Agriculture
+350,Public Sculpture
+371,Falconry
+375,Visitor Farm
+406,Local Produce
+440,Cooking
+441,Cookery
+444,Artisan
+488,Castle
+496,
+514,Embarkation Point
+515,Boat
+526,Traditionally Irish
+545,Comedy
+610,Literary Ireland
+722,Swimming Pool
+806,Public Park
+826,Forest Park
+827,Park and Forest Walk
+904,Vegan
+950,Fast Food
+1049,Zip Lining
+1060,Gardening
+1082,Fitness and Leisure
+1087,Banquet
+1136,Marina
+1152,Food Trails and Tour
+1157,Cruising
+1584,Race Course
+1826,Driving Range
+1828,Golf Driving Range
+1969,National Park
+1970,National and Forest Park

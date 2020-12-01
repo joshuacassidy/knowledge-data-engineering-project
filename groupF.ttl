@@ -1,0 +1,1658 @@
+@prefix : <http://www.semanticweb.org/ontologies/2020/10/> .
+@prefix ke: <http://www.semanticweb.org/60973/ontologies/2020/10/ke_GroupAssignment#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/2020/10/> .
+
+<http://www.semanticweb.org/ontologies/2020/10/> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#int
+xsd:int owl:equivalentClass xsd:integer .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn
+:accommodationLocatedIn rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasAccommodationActivities ,
+                                           :hasAccommodationActivityTypes ;
+                        owl:inverseOf :hasAccommodationLocation ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy
+:accommodationOwnedBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hostAccommedationRating ,
+                                         :hostAmenities ,
+                                         :hostAvailabilties ,
+                                         :hostPropertyType ,
+                                         :hostReviews ,
+                                         :hostRoomType ;
+                      owl:inverseOf :ownsAccommodation ;
+                      rdfs:domain :Accommodation ;
+                      rdfs:range :Host .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn
+:activityLocatedIn rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :activityTypeLocations ,
+                                      :hasActivityAccommodation ,
+                                      :hasActivityTypeAccommodation ,
+                                      :hasActivityTypeAmenity ,
+                                      :hasActivityTypeAvailabilities ,
+                                      :hasActivityTypePropertyType ;
+                   owl:inverseOf :hasActivityLocation ;
+                   rdfs:domain :Activity ;
+                   rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLocatedInatedIn
+:activityLocatedInatedIn rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :hasActivityTypeRoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations
+:activityTypeLocations rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :activityTypeLocations ,
+                                          owl:topObjectProperty ;
+                       rdf:type owl:TransitiveProperty ;
+                       rdfs:domain :ActivityType ;
+                       rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/containsRegions
+:containsRegions rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :countyLocatedIn ;
+                 rdfs:domain :Country ;
+                 rdfs:range :County .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn
+:countyLocatedIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain :County ;
+                 rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities
+:hasAccommodationActivities rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            owl:inverseOf :hasActivityAccommodation ;
+                            rdf:type owl:TransitiveProperty ;
+                            rdfs:domain :Accommodation ;
+                            rdfs:range :Activity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes
+:hasAccommodationActivityTypes rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               owl:inverseOf :hasActivityTypeAccommodation ;
+                               rdf:type owl:TransitiveProperty ;
+                               rdfs:domain :Accommodation ;
+                               rdfs:range :ActivityType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities
+:hasAccommodationAvailabilities rdf:type owl:ObjectProperty ;
+                                owl:inverseOf :hasAvailabilitiesForAccommodation ;
+                                rdfs:domain :Accommodation ;
+                                rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation
+:hasAccommodationLocation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasActivityAccommodation ,
+                                             :hasActivityAmenities ,
+                                             :hasActivityAvailability ,
+                                             :hasActivityPropertyType ,
+                                             :hasActivityRoomType ,
+                                             :hasActivityTypeAccommodation ,
+                                             :hasActivityTypeAmenity ,
+                                             :hasActivityTypeAvailabilities ,
+                                             :hasActivityTypePropertyType ,
+                                             :hasActivityTypeRoomType ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating
+:hasAccommodationRating rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :ratesAccommodation ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range :AccommodationRating .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType
+:hasAccommodationsPropertyType rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :isPropertyType ;
+                               rdfs:domain :PropertyType ;
+                               rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType
+:hasAccommodationsRoomType rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :isRoomType ;
+                           rdfs:domain :RoomType ;
+                           rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivities
+:hasActivities rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :activityTypeLocations ,
+                                  :hasActivityTypeAccommodation ,
+                                  :hasActivityTypeAmenity ,
+                                  :hasActivityTypeAvailabilities ,
+                                  :hasActivityTypePropertyType ,
+                                  :hasActivityTypeRoomType ;
+               owl:inverseOf :hasActivityType ;
+               rdfs:domain :ActivityType ;
+               rdfs:range :Activity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation
+:hasActivityAccommodation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdf:type owl:TransitiveProperty ;
+                          rdfs:domain :Activity ;
+                          rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities
+:hasActivityAmenities rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdf:type owl:TransitiveProperty ;
+                      rdfs:domain :Activity ;
+                      rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability
+:hasActivityAvailability rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :Activity ;
+                         rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation
+:hasActivityLocation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasAccommodationActivities ,
+                                        :hasAccommodationActivityTypes ;
+                     rdfs:domain :Activity ;
+                     rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType
+:hasActivityPropertyType rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain :Activity ;
+                         rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType
+:hasActivityRoomType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdf:type owl:TransitiveProperty ;
+                     rdfs:domain :Activity ;
+                     rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityType
+:hasActivityType rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasAccommodationActivityTypes ;
+                 rdfs:domain :Activity ;
+                 rdfs:range :ActivityType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation
+:hasActivityTypeAccommodation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdf:type owl:TransitiveProperty ;
+                              rdfs:domain :ActivityType ;
+                              rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity
+:hasActivityTypeAmenity rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdf:type owl:TransitiveProperty ;
+                        rdfs:domain :ActivityType ;
+                        rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities
+:hasActivityTypeAvailabilities rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdf:type owl:TransitiveProperty ;
+                               rdfs:domain :ActivityType ;
+                               rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType
+:hasActivityTypePropertyType rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdf:type owl:TransitiveProperty ;
+                             rdfs:domain :ActivityType ;
+                             rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType
+:hasActivityTypeRoomType rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :ActivityType ;
+                         rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAmenities
+:hasAmenities rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasActivityAmenities ,
+                                 :hasActivityTypeAmenity ,
+                                 :hostAmenities ;
+              owl:inverseOf :partOfAccommodationAmenities ;
+              rdfs:domain :Accommodation ;
+              rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation
+:hasAvailabilitiesForAccommodation rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :hasActivityAvailability ,
+                                                      :hasActivityTypeAvailabilities ,
+                                                      :hostAvailabilties ;
+                                   rdfs:domain :Availability ;
+                                   rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasReviews
+:hasReviews rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hostReviews ;
+            owl:inverseOf :hostReviews ,
+                          :reviewAbout ;
+            rdfs:domain :Accommodation ;
+            rdfs:range :Review .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating
+:hostAccommedationRating rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :Host ;
+                         rdfs:range :AccommodationRating .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAmenities
+:hostAmenities rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Host ;
+               rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties
+:hostAvailabilties rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdf:type owl:TransitiveProperty ;
+                   rdfs:domain :Host ;
+                   rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostPropertyType
+:hostPropertyType rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:TransitiveProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostReviews
+:hostReviews rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain :Host ;
+             rdfs:range :Review .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostRoomType
+:hostRoomType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:domain :Host ;
+              rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/isPropertyType
+:isPropertyType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasActivityPropertyType ,
+                                   :hasActivityTypePropertyType ,
+                                   :hostPropertyType ;
+                rdfs:domain :Accommodation ;
+                rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/isRoomType
+:isRoomType rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasActivityRoomType ,
+                               :hasActivityTypeRoomType ,
+                               :hostRoomType ;
+            rdfs:domain :Accommodation ;
+            rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation
+:ownsAccommodation rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Host ;
+                   rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities
+:partOfAccommodationAmenities rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Amenity ;
+                              rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/partOfRegion
+:partOfRegion rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :County ;
+              rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation
+:ratesAccommodation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hostAccommedationRating ;
+                    rdfs:domain :AccommodationRating ;
+                    rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewAbout
+:reviewAbout rdf:type owl:ObjectProperty ;
+             rdfs:domain :Review ;
+             rdfs:range :Accommodation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates
+:accommodationAccommodates rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Accommodation ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription
+:accommodationBathroomDescription rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :Accommodation ;
+                                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms
+:accommodationBathrooms rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms
+:accommodationBedrooms rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBeds
+:accommodationBeds rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accommodation ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationDescription
+:accommodationDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationId
+:accommodationId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Accommodation ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable
+:accommodationInstantBookable rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Accommodation ;
+                              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated
+:accommodationLastUpdated rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude
+:accommodationLatitude rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude
+:accommodationLongitude rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationName
+:accommodationName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accommodation ;
+                   rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription
+:accommodationNeighborhoodDescription rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Accommodation ;
+                                      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRating
+:accommodationRating rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :AccommodationRating ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy
+:accommodationRatingAccuracy rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :AccommodationRating ;
+                             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn
+:accommodationRatingCheckIn rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :AccommodationRating ;
+                            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness
+:accommodationRatingCleanliness rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :AccommodationRating ;
+                                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication
+:accommodationRatingComunication rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :AccommodationRating ;
+                                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId
+:accommodationRatingId rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :AccommodationRating ;
+                       rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation
+:accommodationRatingLocation rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :AccommodationRating ;
+                             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue
+:accommodationRatingValue rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :AccommodationRating ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth
+:accommodationReviewsPerMonth rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Accommodation ;
+                              rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationURL
+:accommodationURL rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accommodation ;
+                  rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityId
+:activityId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Activity ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLatitude
+:activityLatitude rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Activity ;
+                  rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLocation
+:activityLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Activity ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLongitude
+:activityLongitude rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Activity ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityName
+:activityName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Activity ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTelephone
+:activityTelephone rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Activity ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTypeName
+:activityTypeName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ActivityType ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityWebsite
+:activityWebsite rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Activity ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/amenityId
+:amenityId rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Amenity ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/amenityName
+:amenityName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Amenity ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice
+:availabilityAdjustedPrice rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Availability ;
+                           rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable
+:availabilityAvaliable rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Availability ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityDate
+:availabilityDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Availability ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityId
+:availabilityId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Availability ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityMax
+:availabilityMax rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Availability ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityMin
+:availabilityMin rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Availability ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityPrice
+:availabilityPrice rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Country ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyIsCapital
+:countyIsCapital rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :County ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyName
+:countyName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :County ;
+            rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAbout
+:hostAbout rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Host ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate
+:hostAcceptanceRate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Host ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostId
+:hostId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Host ;
+        rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost
+:hostIsSuperHost rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Host ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostLocation
+:hostLocation rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Host ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostName
+:hostName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Host ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostPicture
+:hostPicture rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Host ;
+             rdfs:range xsd:hexBinary .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostResponseRate
+:hostResponseRate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostResponseTime
+:hostResponseTime rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostSince
+:hostSince rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Host ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostURL
+:hostURL rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Host ;
+         rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/propertyType
+:propertyType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PropertyType ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/propertyTypeId
+:propertyTypeId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :PropertyType ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/review
+:review rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Review ;
+        rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated
+:reviewDateCreated rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Review ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewId
+:reviewId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Review ;
+          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewerName
+:reviewerName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Review ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/roomType
+:roomType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RoomType ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/roomTypeId
+:roomTypeId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RoomType ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Availability ;
+                    rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
+                                 owl:allValuesFrom :Location
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationOwnedBy ;
+                                 owl:allValuesFrom :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAccommodationRating ;
+                                 owl:allValuesFrom :AccommodationRating
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:allValuesFrom :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:allValuesFrom :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAccommodationAvailabilities ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Availability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAmenities ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Amenity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasReviews ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Review
+                               ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/AccommodationRating
+:AccommodationRating rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:allValuesFrom :Accommodation
+                                     ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityType ;
+                            owl:someValuesFrom :ActivityType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :activityLocatedIn ;
+                            owl:allValuesFrom :Location
+                          ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ActivityType
+:ActivityType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasActivities ;
+                                owl:allValuesFrom :Activity
+                              ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Amenity
+:Amenity rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :partOfAccommodationAmenities ;
+                           owl:allValuesFrom :Accommodation
+                         ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Availability
+:Availability rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:allValuesFrom :Accommodation
+                              ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :containsRegions ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :County
+                         ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :countyLocatedIn ;
+                          owl:allValuesFrom :Country
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :partOfRegion ;
+                          owl:allValuesFrom :Location
+                        ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Host
+:Host rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :ownsAccommodation ;
+                        owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Accommodation
+                      ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :partOfRegion ;
+                            owl:allValuesFrom :County
+                          ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/PropertyType
+:PropertyType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAccommodationsPropertyType ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
+                              ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:allValuesFrom :Accommodation
+                        ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/RoomType
+:RoomType rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationsRoomType ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Accommodation
+                          ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+
+
+<#ActivitiesTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT NAME, LONGITUDE,LATITUDE, TELEPHONE, URL, AddressRegion, Activities.ACTIVITYID, ActivitiesJoin.ACTIVITYTYPEID, ActivitiesJoin.ACTIVITYID AS ACTIVITYIDJ FROM Activities INNER JOIN ActivitiesJoin ON Activities.ACTIVITYID = ActivitiesJoin.ACTIVITYID  WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Activities/{NAME}" ;
+		rr:class :Activity;
+	];
+	rr:predicateObjectMap [
+		rr:predicate :activityName ;
+		rr:objectMap [ rr:column "NAME" ]
+	] ;
+
+  rr:predicateObjectMap [
+		rr:predicate :activityWebsite ;
+		rr:objectMap [ 
+			rr:column "URL" ; 
+			rr:datatype xsd:string; 
+		] ; 
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :activityTelephone;
+		rr:objectMap [ rr:column "TELEPHONE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :activityLongitude;
+		rr:objectMap [ 
+			rr:column "LONGITUDE"; 
+			rr:datatype xsd:decimal 
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :activityLatitude;
+		rr:objectMap [ 
+			rr:column "LATITUDE";
+			rr:datatype xsd:decimal
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hasActivityType ;
+		rr:objectMap [
+		rr:parentTriplesMap <#ActivitiesTypesTripleMap>;
+			rr:joinCondition [
+				rr:parent "ACTIVITYID" ;
+				rr:child "ACTIVITYIDJ" ;
+			] ;
+		] ; 
+	] ;
+
+  rr:predicateObjectMap [
+		rr:predicate :activityLocatedIn ;
+		rr:objectMap [
+      rr:parentTriplesMap <#LocationTripleMap>;
+			rr:joinCondition [
+				rr:parent "COUNTY" ;
+				rr:child "ADDRESSREGION" ;
+			] ;
+		] ; 
+	] ;
+
+	.
+
+<#ActivitiesTypesTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT ACTIVITYTYPE, ActivitiesTypes.ACTIVITYTYPEID, ActivitiesJoin.ACTIVITYTYPEID as ACTIVITYTYPEIDJ, ActivitiesJoin.ACTIVITYID FROM ActivitiesTypes INNER JOIN ActivitiesJoin ON ActivitiesTypes.ACTIVITYTYPEID = ActivitiesJoin.ACTIVITYTYPEID WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/ActivitiesTypes/{ACTIVITYTYPE}" ;
+		rr:class :ActivityType;
+	];
+	rr:predicateObjectMap [
+		rr:predicate :activityTypeName ;
+		rr:objectMap [ rr:column "ACTIVITYTYPE" ]
+	] ;
+  	
+
+  
+  rr:predicateObjectMap [
+		rr:predicate :hasActivities ;
+		rr:objectMap [
+      		rr:parentTriplesMap <#ActivitiesTripleMap>;
+			rr:joinCondition [
+				rr:parent "ACTIVITYTYPEID" ;
+				rr:child "ACTIVITYTYPEIDJ" ;
+			] ;
+		] ; 
+	] ;
+	.
+
+<#CountryTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Counties WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Country/{COUNTRY}" ;
+		rr:class :Country;
+	];
+	rr:predicateObjectMap [
+		rr:predicate :countryName ;
+		rr:objectMap [ rr:column "COUNTRY" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :containsRegions ;
+		rr:objectMap [
+			rr:parentTriplesMap <#CountyTripleMap>;
+			rr:joinCondition [
+				rr:child "COUNTRY" ;
+				rr:parent "COUNTRY" ;
+			] ;
+		] ; 
+	] ;
+	.
+
+<#CountyTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Counties WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/County/{COUNTY}" ;
+		rr:class :County;
+	];
+	rr:predicateObjectMap [
+		rr:predicate :countyName ;
+		rr:objectMap [ rr:column "COUNTY" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :countyIsCapital ;
+		rr:objectMap [ 
+      rr:column "ISCAPITAL";
+      rr:datatype xsd:boolean
+   ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :countyLocatedIn ;
+		rr:objectMap [
+			rr:parentTriplesMap <#CountryTripleMap>;
+			rr:joinCondition [
+				rr:child "COUNTY" ;
+				rr:parent "COUNTY" ;
+			] ;
+		] ; 
+	] ;
+
+	rr:predicateObjectMap [
+		rr:predicate :partOfRegion ;
+		rr:objectMap [
+			rr:parentTriplesMap <#LocationTripleMap>;
+			rr:joinCondition [
+				rr:child "COUNTY" ;
+				rr:parent "COUNTY" ;
+			];
+		]; 
+	];
+
+	.
+
+<#LocationTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Counties WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Location/{COUNTY}" ;
+		rr:class :Location;
+	];
+	
+  rr:predicateObjectMap [
+		rr:predicate :partOfRegion ;
+		rr:objectMap [
+			rr:parentTriplesMap <#CountyTripleMap>;
+			rr:joinCondition [
+				rr:child "COUNTY" ;
+				rr:parent "COUNTY" ;
+			];
+		]; 
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate :hasActivityLocation ;
+		rr:objectMap [
+      rr:parentTriplesMap <#ActivitiesTripleMap>;
+			rr:joinCondition [
+				rr:parent "ADDRESSREGION" ;
+				rr:child "COUNTY" ;
+			] ;
+		] ; 
+	] ;
+
+	rr:predicateObjectMap [
+		rr:predicate :hasAccommodationLocation ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "COUNTY" ;
+				rr:parent "LOCATION" ;
+			];
+		]; 
+	];
+	.
+
+
+<#HostTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Host WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Host/{HOSTID}" ;
+		rr:class :Host;
+	];
+	
+  rr:predicateObjectMap [
+		rr:predicate :hostId ;
+		rr:objectMap [ rr:column "HOSTID" ]
+	] ;
+
+  rr:predicateObjectMap [
+		rr:predicate :hostURL ;
+		rr:objectMap [ rr:column "HOSTURL" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostName ;
+		rr:objectMap [ rr:column "HOSTNAME" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostAbout ;
+		rr:objectMap [ rr:column "HOSTABOUT" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostResponseTime ;
+		rr:objectMap [ rr:column 
+		"HOSTRESPONSETIME"
+	]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostResponseRate ;
+		rr:objectMap [ 
+			rr:column "HOSTRESPONSERATE";
+			rr:datatype xsd:integer;
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostAcceptanceRate;
+		rr:objectMap [ 
+			rr:column "HOSTACCEPTANCERATE";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostIsSuperHost;
+		rr:objectMap [ 
+			rr:column "HOSTISSUPERHOST";
+			rr:datatype xsd:boolean
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostPicture ;
+		rr:objectMap [ rr:column "HOSTPICTUREURL" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hostSince ;
+		rr:objectMap [ rr:column "HOSTSINCE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :ownsAccommodation ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "HOSTID" ;
+				rr:parent "HOSTID" ;
+			];
+		]; 
+	];
+
+	
+	.
+
+  
+<#AccommodationTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT ACCOMMODATION.ACCOMMODATIONID as ACCOMMODATIONID, AMENITYJOIN.AMENITYID AS AMENITYIDJ, HOSTID,NAME,DESCRIPTION,LISTINGURL,NEIGHBORHOODOVERVIEW,ACCOMMODATES,LOCATION,BATHROOMS,BATHROOMSTEXT,BEDROOMS,BEDS,INSTANTBOOKABLE,REVIEWSPERMONTH,LATITUDE,LONGITUDE,PROPERTYTYPEID,ROOMTYPEID,LASTUPDATED, AmenityJoin.ACCOMMODATIONID AS ACCOMMODATIONIDJ FROM ACCOMMODATION INNER JOIN AmenityJoin ON ACCOMMODATION.ACCOMMODATIONID = AmenityJoin.ACCOMMODATIONID WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Accommodation/{ACCOMMODATIONID}" ;
+		rr:class :Accommodation;
+	];
+  	rr:predicateObjectMap [
+		rr:predicate :accommodationId ;
+		rr:objectMap [ rr:column "ACCOMMODATIONID" ]
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :accommodationName ;
+		rr:objectMap [ rr:column "NAME" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationDescription ;
+		rr:objectMap [ rr:column "DESCRIPTION" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationURL;
+		rr:objectMap [ rr:column "LISTINGURL" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationNeighborhoodDescription ;
+		rr:objectMap [ rr:column "NEIGHBORHOODOVERVIEW" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationAccommodates ;
+		rr:objectMap [ 
+			rr:column "ACCOMMODATES";
+			rr:datatype xsd:integer 
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :activityLocation ;
+		rr:objectMap [ rr:column "LOCATION" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationBathrooms ;
+		rr:objectMap [ 
+			rr:column "BATHROOMS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationBathroomDescription ;
+		rr:objectMap [ rr:column "BATHROOMSTEXT" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationBedrooms ;
+		rr:objectMap [ 
+			rr:column "BEDROOMS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationBeds ;
+		rr:objectMap [ 
+			rr:column "BEDS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationInstantBookable ;
+		rr:objectMap [ rr:column "INSTANTBOOKABLE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationReviewsPerMonth ;
+		rr:objectMap [ 
+			rr:column "REVIEWSPERMONTH"; 
+			rr:datatype xsd:decimal 
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationLatitude ;
+		rr:objectMap [ rr:column "LATITUDE"; rr:datatype xsd:decimal  ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationLongitude ;
+		rr:objectMap [ rr:column "LONGITUDE"; rr:datatype xsd:decimal  ]
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :accommodationLastUpdated ;
+		rr:objectMap [ rr:column "LASTUPDATED" ]
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :accommodationOwnedBy ;
+		rr:objectMap [
+			rr:parentTriplesMap <#HostTripleMap>;
+			rr:joinCondition [
+				rr:child "HOSTID" ;
+				rr:parent "HOSTID" ;
+			];
+		]; 
+	];
+  rr:predicateObjectMap [
+		rr:predicate :accommodationLocatedIn ;
+		rr:objectMap [
+			rr:parentTriplesMap <#LocationTripleMap>;
+			rr:joinCondition [
+				rr:child "LOCATION" ;
+				rr:parent "COUNTY" ;
+			];
+		]; 
+	];
+
+  rr:predicateObjectMap [
+		rr:predicate :isPropertyType ;
+		rr:objectMap [
+			rr:parentTriplesMap <#PropertyTypeTripleMap>;
+			rr:joinCondition [
+				rr:child "PROPERTYTYPEID" ;
+				rr:parent "PROPERTYTYPEID" ;
+			];
+		]; 
+	];
+
+  rr:predicateObjectMap [
+		rr:predicate :isRoomType ;
+		rr:objectMap [
+			rr:parentTriplesMap <#RoomTypeTripleMap>;
+			rr:joinCondition [
+				rr:child "ROOMTYPEID" ;
+				rr:parent "ROOMTYPEID" ;
+			];
+		]; 
+	];
+  rr:predicateObjectMap [
+		rr:predicate :hasReviews ;
+		rr:objectMap [
+			rr:parentTriplesMap <#ReviewsTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+
+  rr:predicateObjectMap [
+		rr:predicate :ratesAccommodation ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationRatingTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+  rr:predicateObjectMap [
+		rr:predicate :hasAccommodationAvailabilities ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AvailabilityTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+  rr:predicateObjectMap [
+		rr:predicate :hasAmenities ;
+		rr:objectMap [
+      rr:parentTriplesMap <#AmenitiesTripleMap>;
+			rr:joinCondition [
+				rr:parent "ACCOMMODATIONID" ;
+				rr:child "ACCOMMODATIONIDJ" ;
+			] ;
+		] ; 
+	] ;
+  .
+
+<#PropertyTypeTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM PropertyType WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/PropertyType/{PROPERTYTYPEID}" ;
+		rr:class :PropertyType;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :propertyType ;
+		rr:objectMap [ rr:column "PROPERTYTYPE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :propertyTypeId ;
+		rr:objectMap [ rr:column "PROPERTYTYPEID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hasAccommodationsPropertyType ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "PROPERTYTYPEID" ;
+				rr:parent "PROPERTYTYPEID" ;
+			];
+		]; 
+	];
+	.
+
+<#RoomTypeTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM RoomType WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/RoomType/{ROOMTYPEID}" ;
+		rr:class :RoomType;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :roomType ;
+		rr:objectMap [ rr:column "ROOMTYPE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :roomTypeId ;
+		rr:objectMap [ rr:column "ROOMTYPEID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :hasAccommodationsRoomType ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "ROOMTYPEID" ;
+				rr:parent "ROOMTYPEID" ;
+			];
+		]; 
+	];
+	.
+
+
+<#ReviewsTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Reviews WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/Reviews/{REVIEWID}" ;
+		rr:class :Review;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :reviewId ;
+		rr:objectMap [ rr:column "REVIEWID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :reviewerName ;
+		rr:objectMap [ rr:column "REVIEWERNAME" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :review ;
+		rr:objectMap [ rr:column "COMMENTS" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :reviewDateCreated ;
+		rr:objectMap [ rr:column "REVIEWDATE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :reviewAbout ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+	.
+
+<#AccommodationRatingTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM AccommodationRating WHERE 1"""
+	] ;
+	rr:subjectMap [
+		rr:template "http://foo.example/AccommodationRating/{ACCOMMODATIONRATINGID}" ;
+		rr:class :AccommodationRating;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingId ;
+		rr:objectMap [ rr:column "ACCOMMODATIONID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRating ;
+		rr:objectMap [ 
+			rr:column "RATING";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingAccuracy ;
+		rr:objectMap [ 
+			rr:column "RATINGACCURACY";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingCleanliness ;
+		rr:objectMap [ 
+			rr:column "CLEANLINESS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingCheckIn ;
+		rr:objectMap [ 
+			rr:column "CHECKIN";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingComunication ;
+		rr:objectMap [ 
+			rr:column "COMMUNICATION";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :accommodationRatingValue ;
+		rr:objectMap [ 
+			rr:column "VALUE";
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :accommodationRatingLocation ;
+		rr:objectMap [ 
+			rr:column "LOCATION";
+			rr:datatype xsd:integer
+		]
+	] ;
+
+  rr:predicateObjectMap [
+		rr:predicate :hasAccommodationRating ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+	.
+
+
+
+<#AvailabilityTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM Calendar WHERE 1"""
+	] ;
+	rr:subjectMap [ 
+		rr:template "http://foo.example/Availability/{AVAILABILITYID}" ;
+		rr:class :Availability;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :availabilityDate ;
+		rr:objectMap [ rr:column "CALENDERDATE" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityId ;
+		rr:objectMap [ rr:column "AVAILABILITYID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityMin ;
+		rr:objectMap [ 
+			rr:column "MINIMUMNIGHTS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityMax ;
+		rr:objectMap [ 
+			rr:column "MAXIMUMNIGHTS";
+			rr:datatype xsd:integer
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityAvaliable ;
+		rr:objectMap [ 
+			rr:column "AVAILABLE";
+			rr:datatype xsd:boolean
+
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityPrice ;
+		rr:objectMap [ 
+			rr:column "PRICE";
+			rr:datatype xsd:decimal
+			
+		]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :availabilityAdjustedPrice;
+		rr:objectMap [ 
+			rr:column "ADJUSTEDPRICE";
+			rr:datatype xsd:decimal
+		]
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :availabilityAvaliable;
+		rr:objectMap [ rr:column "ACCOMMODATIONID" ]
+	] ;
+  
+  rr:predicateObjectMap [
+		rr:predicate :hasAvailabilitiesForAccommodation ;
+		rr:objectMap [
+			rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:child "ACCOMMODATIONID" ;
+				rr:parent "ACCOMMODATIONID" ;
+			];
+		]; 
+	];
+	.
+
+
+<#AmenitiesTripleMap>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT AMENITYJOIN.ACCOMMODATIONID as ACCOMMODATIONID, Amenity.AMENITYID as AMENITYID, Amenity.AMENITY as AMENITY, AMENITYJOIN.AMENITYID AS AMENITYIDJ FROM AMENITY INNER JOIN AMENITYJOIN ON Amenity.AMENITYID = AMENITYJOIN.AMENITYID WHERE 1"""
+	] ;
+	rr:subjectMap [ 
+		rr:template "http://foo.example/Amenity/{AMENITYID}" ;
+		rr:class :Amenity;
+	];
+  rr:predicateObjectMap [
+		rr:predicate :amenityId ;
+		rr:objectMap [ rr:column "AMENITYID" ]
+	] ;
+  rr:predicateObjectMap [
+		rr:predicate :amenityName ;
+		rr:objectMap [ rr:column "AMENITY" ]
+	] ;
+
+  rr:predicateObjectMap [
+		rr:predicate :partOfAccommodationAmenities ;
+		rr:objectMap [
+      rr:parentTriplesMap <#AccommodationTripleMap>;
+			rr:joinCondition [
+				rr:parent "AMENITYIDJ" ;
+				rr:child "AMENITYID" ;
+			] ;
+		] ; 
+	] ;
+	.
+
+
