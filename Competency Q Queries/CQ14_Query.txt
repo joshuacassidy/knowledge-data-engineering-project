@@ -1,10 +1,10 @@
-#Where can someone stay to go fishing next summer on 2021-07-18?
+#Where can someone stay to go fishing next summer on 2021-01-18?
 PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
 PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT DISTINCT ?accomadationLocation ?accomadationName ?accomodationURL{
+SELECT DISTINCT ?accomadationLocation ?accomadationName ?accomodationURL ?activity ?activityLocation{
 	?availabilityDate <http://www.semanticweb.org/ontologies/2020/10/availabilityDate> "2021-07-18" .
 	?availableListing <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> ?availabilityDate .
 	?availableListing <http://www.semanticweb.org/ontologies/2020/10/accommodationName> ?accomadationName . 
@@ -12,4 +12,6 @@ SELECT DISTINCT ?accomadationLocation ?accomadationName ?accomodationURL{
     ?availableListing <http://www.semanticweb.org/ontologies/2020/10/accommodationURL> ?accomodationURL .
 	?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Fishing> .
 	?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activity .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation . 
+    FILTER(?activityLocation = <http://foo.example/Location/Dublin>)
 }
