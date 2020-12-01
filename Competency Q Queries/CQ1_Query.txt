@@ -1,4 +1,4 @@
-#Q1. List the all different Activity Names which are near Airbnbs in Dublin
+#Q1. What are the tourists activities near Airbnbs near Dublin?
 PREFIX Activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>

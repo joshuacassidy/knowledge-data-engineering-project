@@ -1,4 +1,4 @@
-#Q2. Near 'Galway' county what are the Activities connected to top airbnbs Ratings.  
+#Q2. Near ‘Galway’ county, what activities are nearby the top rated airbnbs? 
 PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX ratings:  <http://www.semanticweb.org/ontologies/2020/10/accRating>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>

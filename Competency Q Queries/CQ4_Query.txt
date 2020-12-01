@@ -1,4 +1,4 @@
-#Q4. In Ireland country how many are the owners of Airbnbs where there are most Tourists activities. 
+#Q4. Besides ‘Dublin’ tourist location, list the owners of the Airbnbs? 
 PREFIX SuperHost:<http://www.semanticweb.org/ontologies/2020/10/Host>
 PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -9,7 +9,6 @@ SELECT DISTINCT ?SuperHost ?airbnblocation ?ActivityLocation WHERE{
     ?airbnblocation <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?accLoc .
     ?airbnbName <http://www.semanticweb.org/ontologies/2020/10/isSuperHost> ?SuperHost.
     ?s  <http://www.semanticweb.org/ontologies/2020/10/activityLocation> ?ActivityLocation
-    FILTER (?SuperHost = "true")
+    FILTER (?SuperHost = "true" && (?ActivityLocation != 'Dublin'))
 }
-GROUP BY ?SuperHost ?airbnblocation ?ActivityLocation ORDER BY (?SuperHost)
-LIMIT 100
+GROUP BY ?SuperHost ?airbnblocation ?ActivityLocation ORDER BY (?ActivityLocation)

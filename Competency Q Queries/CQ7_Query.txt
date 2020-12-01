@@ -1,12 +1,12 @@
-#Q7.In Ireland how many Airbnbs RoomTypes are avalable around for Tourists 
+#Q7. What are the types of room in each counties for nearby tourists activities in Ireland? 
 PREFIX RoomType:<http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT ?RoomTypeID ?activityLocation ?RoomTypeName WHERE{
+SELECT ?RoomTypeID  ?RoomTypeName ?activityLocation WHERE{
     ?s <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn>
     ?activityLocation.
     ?RoomTypeID <http://www.semanticweb.org/ontologies/2020/10/roomType> ?RoomTypeName .
 }
 GROUP BY ?RoomTypeID ?activityLocation ?RoomTypeName ORDER BY ?RoomTypeName
-LIMIT 75
+LIMIT 100

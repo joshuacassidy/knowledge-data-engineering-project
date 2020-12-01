@@ -1,0 +1,17 @@
+#Q. What accomodations can you stay in to go fishing that have more than 3 beds?
+PREFIX MostActivity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX County:  <http://www.semanticweb.org/ontologies/2020/10/Location>
+PREFIX Accommodation: <http://www.semanticweb.org/ontologies/2020/10/Accomedation>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?Activities ?ActivityLocation ?propertyType ?Beds WHERE{
+?activityType
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeName> ?Activities .
+   ?location  <http://www.semanticweb.org/ontologies/2020/10/activityLocation> ?ActivityLocation .
+   ?name <http://www.semanticweb.org/ontologies/2020/10/propertyType> ?propertyType .
+   ?type <http://www.semanticweb.org/ontologies/2020/10/accBeds> ?Beds
+    FILTER (?Activities in ("Fishing") && (?Beds = "3")) 
+}
+GROUP BY ?Activities ?ActivityLocation ?propertyType ?Beds
+LIMIT 10
