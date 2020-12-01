@@ -77,7 +77,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-26" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -87,7 +87,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/496>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -324,7 +326,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/475>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -653,7 +657,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/454>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -4134,6 +4140,49 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
                 265.00 .
 
+<http://foo.example/Accommodation/43920125>
+        a       <http://www.semanticweb.org/ontologies/2020/10/Accommodation> ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates>
+                2 ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription>
+                "1 private bath" ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms>
+                1 ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationBeds>
+                1 ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationDescription>
+                "Self contained en-suite bedroom with private entrance & parking. Newly refurbished so first letting (November 2020). King size bed with TV & WiFi included. Cosy electric heating & large shower. Continental breakfast provided. No cooking facilities available, however fridge in room. <br />Located just off the Drimnagh Road beside main bus routes into the city. 10 mins walk to Our Lady's Hospital (Crumlin Children's Hospital). Maybe suit healthcare staff working night shifts. Very quiet location." ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationId>
+                "43920125" ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable>
+                "false" ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated>
+                "2020-10-21" ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude>
+                53.32201 ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
+                <http://foo.example/Location/Dublin> ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude>
+                -6.32556 ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationName>
+                "Self-contained ensuite bedroom with private access" ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy>
+                <http://foo.example/Host/76265474> ;
+        <http://www.semanticweb.org/ontologies/2020/10/accommodationURL>
+                "https://www.airbnb.com/rooms/45718304" ;
+        <http://www.semanticweb.org/ontologies/2020/10/activityLocation>
+                "Dublin" ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities>
+                <http://foo.example/Availability/30> , <http://foo.example/Availability/84> , <http://foo.example/Availability/9> , <http://foo.example/Availability/22> , <http://foo.example/Availability/94> , <http://foo.example/Availability/91> , <http://foo.example/Availability/83> , <http://foo.example/Availability/78> , <http://foo.example/Availability/10> , <http://foo.example/Availability/75> , <http://foo.example/Availability/82> , <http://foo.example/Availability/53> , <http://foo.example/Availability/67> , <http://foo.example/Availability/45> , <http://foo.example/Availability/66> , <http://foo.example/Availability/6> , <http://foo.example/Availability/63> , <http://foo.example/Availability/41> , <http://foo.example/Availability/58> , <http://foo.example/Availability/55> , <http://foo.example/Availability/29> , <http://foo.example/Availability/36> , <http://foo.example/Availability/33> , <http://foo.example/Availability/106> , <http://foo.example/Availability/5> , <http://foo.example/Availability/17> , <http://foo.example/Availability/2> , <http://foo.example/Availability/89> , <http://foo.example/Availability/71> , <http://foo.example/Availability/70> , <http://foo.example/Availability/98> , <http://foo.example/Availability/95> , <http://foo.example/Availability/86> , <http://foo.example/Availability/24> , <http://foo.example/Availability/21> , <http://foo.example/Availability/102> , <http://foo.example/Availability/93> , <http://foo.example/Availability/48> , <http://foo.example/Availability/12> , <http://foo.example/Availability/77> , <http://foo.example/Availability/81> , <http://foo.example/Availability/69> , <http://foo.example/Availability/47> , <http://foo.example/Availability/65> , <http://foo.example/Availability/8> , <http://foo.example/Availability/90> , <http://foo.example/Availability/57> , <http://foo.example/Availability/35> , <http://foo.example/Availability/108> , <http://foo.example/Availability/74> , <http://foo.example/Availability/52> , <http://foo.example/Availability/19> , <http://foo.example/Availability/4> , <http://foo.example/Availability/44> , <http://foo.example/Availability/62> , <http://foo.example/Availability/40> , <http://foo.example/Availability/28> , <http://foo.example/Availability/32> , <http://foo.example/Availability/97> , <http://foo.example/Availability/105> , <http://foo.example/Availability/61> , <http://foo.example/Availability/16> , <http://foo.example/Availability/88> , <http://foo.example/Availability/85> , <http://foo.example/Availability/23> , <http://foo.example/Availability/104> , <http://foo.example/Availability/101> , <http://foo.example/Availability/100> , <http://foo.example/Availability/14> , <http://foo.example/Availability/11> , <http://foo.example/Availability/39> , <http://foo.example/Availability/38> , <http://foo.example/Availability/7> , <http://foo.example/Availability/20> , <http://foo.example/Availability/92> , <http://foo.example/Availability/76> , <http://foo.example/Availability/73> , <http://foo.example/Availability/54> , <http://foo.example/Availability/80> , <http://foo.example/Availability/51> , <http://foo.example/Availability/68> , <http://foo.example/Availability/46> , <http://foo.example/Availability/43> , <http://foo.example/Availability/64> , <http://foo.example/Availability/42> , <http://foo.example/Availability/56> , <http://foo.example/Availability/27> , <http://foo.example/Availability/99> , <http://foo.example/Availability/34> , <http://foo.example/Availability/26> , <http://foo.example/Availability/31> , <http://foo.example/Availability/107> , <http://foo.example/Availability/3> , <http://foo.example/Availability/18> , <http://foo.example/Availability/15> , <http://foo.example/Availability/87> , <http://foo.example/Availability/25> , <http://foo.example/Availability/79> , <http://foo.example/Availability/103> , <http://foo.example/Availability/72> , <http://foo.example/Availability/49> , <http://foo.example/Availability/50> , <http://foo.example/Availability/96> , <http://foo.example/Availability/13> , <http://foo.example/Availability/59> , <http://foo.example/Availability/60> , <http://foo.example/Availability/37> ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAmenities>
+                <http://foo.example/Amenity/28> , <http://foo.example/Amenity/27> , <http://foo.example/Amenity/26> , <http://foo.example/Amenity/25> ;
+        <http://www.semanticweb.org/ontologies/2020/10/isPropertyType>
+                <http://foo.example/PropertyType/3> ;
+        <http://www.semanticweb.org/ontologies/2020/10/isRoomType>
+                <http://foo.example/RoomType/3> ;
+        <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation>
+                <http://foo.example/AccommodationRating/2> .
+
 <http://foo.example/Activities/Athassel%20Abbey>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
         <http://www.semanticweb.org/ontologies/2020/10/activityLatitude>
@@ -4272,7 +4321,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Reviews/381>
         a       <http://www.semanticweb.org/ontologies/2020/10/Review> ;
@@ -4710,7 +4761,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/activityLocation>
                 "Dublin" ;
         <http://www.semanticweb.org/ontologies/2020/10/hasAmenities>
-                <http://foo.example/Amenity/48> , <http://foo.example/Amenity/51> , <http://foo.example/Amenity/49> , <http://foo.example/Amenity/50> , <http://foo.example/Amenity/47> , <http://foo.example/Amenity/46> ;
+                <http://foo.example/Amenity/46> , <http://foo.example/Amenity/48> , <http://foo.example/Amenity/51> , <http://foo.example/Amenity/49> , <http://foo.example/Amenity/50> , <http://foo.example/Amenity/47> ;
         <http://www.semanticweb.org/ontologies/2020/10/isPropertyType>
                 <http://foo.example/PropertyType/8> ;
         <http://www.semanticweb.org/ontologies/2020/10/isRoomType>
@@ -4898,7 +4949,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/amenityName>
                 "Breakfast" ;
         <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/50>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -5096,7 +5147,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/83>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -5285,7 +5338,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-13" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -5295,7 +5348,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/74950995>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -5365,7 +5420,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/11%20Day%20Discover%20Ireland%20Tour%20-%20Vagabond%20Tours%20of%20Ireland>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -5564,7 +5621,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-01" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -5574,7 +5631,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/41>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -5824,7 +5883,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ballinalacken%20Castle%20Country%20House%20and%20Restaurant>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -6047,7 +6108,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-07" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -6057,7 +6118,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Askea%20Country%20Market>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -6293,7 +6356,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/487>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -6467,7 +6532,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-26" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -6477,7 +6542,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Alvito%27s%20Italian%20Restaurant>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -6662,7 +6729,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/158>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -7879,7 +7948,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/ActivitiesTypes/Pampering>
         a       <http://www.semanticweb.org/ontologies/2020/10/ActivityType> ;
@@ -11278,7 +11349,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-13" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -11288,7 +11359,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/53>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -11422,7 +11495,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-10" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -11432,7 +11505,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/County/Roscommon>
         a       <http://www.semanticweb.org/ontologies/2020/10/County> ;
@@ -11518,7 +11593,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-22" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -11528,7 +11603,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/County/Tipperary>
         a       <http://www.semanticweb.org/ontologies/2020/10/County> ;
@@ -11681,7 +11758,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-19" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -11691,7 +11768,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/90>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -11937,7 +12016,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Beaulieu%20House%20Gardens>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -12246,7 +12327,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-08" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -12256,7 +12337,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/331956946>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -12391,7 +12474,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-05" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -12401,7 +12484,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ardmulchan%20Church>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -12478,7 +12563,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/225732511>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -12648,7 +12735,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/149>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -12841,7 +12930,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-24" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -12851,7 +12940,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/128>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -15813,7 +15904,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-21" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -15823,7 +15914,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/137364020>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -16410,7 +16503,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/amenityName>
                 "Lock on bedroom door" ;
         <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/53>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -16776,7 +16869,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-16" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -16786,7 +16879,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/357>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -17249,7 +17344,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-01" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -17259,7 +17354,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Bargetrip.ie%20-%20Canal%20Boat%20Tour>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -17602,7 +17699,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ballyrafton%20Wood>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -17913,7 +18012,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-20" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -17923,7 +18022,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Beale%20Strand>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -18122,7 +18223,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/55568428>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -18310,7 +18413,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/232299996>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -18649,7 +18754,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/283>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -18813,7 +18920,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/119>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -19097,7 +19206,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/149136751>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -19311,7 +19422,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/312835982>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -20314,7 +20427,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/207845738>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -21793,7 +21908,7 @@
 <http://foo.example/PropertyType/3>
         a       <http://www.semanticweb.org/ontologies/2020/10/PropertyType> ;
         <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType>
-                <http://foo.example/Accommodation/45718304> ;
+                <http://foo.example/Accommodation/43920125> ;
         <http://www.semanticweb.org/ontologies/2020/10/propertyType>
                 "Entire apartment" ;
         <http://www.semanticweb.org/ontologies/2020/10/propertyTypeId>
@@ -23643,7 +23758,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-22" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -23653,7 +23768,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/406017>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -23962,7 +24079,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/72>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -24240,7 +24359,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/51>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -24360,7 +24481,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-08" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -24370,7 +24491,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Angling%20Ballyshunock%20Reservoir>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -24420,7 +24543,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-20" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -24430,7 +24553,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/30>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -24594,7 +24719,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Atlantic%20Sheepdogs>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -24858,7 +24985,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Athlone%20Equestrian%20Centre>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -25271,7 +25400,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/476>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -25489,7 +25620,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/168>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -25570,7 +25703,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/455>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -28978,7 +29113,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-19" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -28988,7 +29123,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Reviews/382>
         a       <http://www.semanticweb.org/ontologies/2020/10/Review> ;
@@ -29594,7 +29731,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/hostURL>
                 "https://www.airbnb.com/users/show/76265474" ;
         <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/26>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -29603,7 +29740,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/amenityName>
                 "Laptop-friendly workspace" ;
         <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/55938311>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -29994,7 +30131,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-14" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -30004,7 +30141,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/355>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -30041,7 +30180,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-23" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -30051,7 +30190,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/ActivitiesTypes/Walking>
         a       <http://www.semanticweb.org/ontologies/2020/10/ActivityType> ;
@@ -30279,7 +30420,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/42>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -30501,7 +30644,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/313>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -30863,7 +31008,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-08" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -30873,7 +31018,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/30297240>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -31098,7 +31245,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-18" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -31108,7 +31255,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/488>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -31475,7 +31624,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/467>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -31650,7 +31801,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-24" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -31660,7 +31811,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Aura%20Letterkenny%20Leisure%20Complex>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -31896,7 +32049,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-03" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -31906,7 +32059,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/42059994>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -32825,7 +32980,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/695>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -33713,7 +33870,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-06" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -33723,7 +33880,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ballinrobe%20Racecourse>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -36775,7 +36934,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/An%20Chéibh%20Bheag%20%28Cloghmore%20Pier%29>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -36882,7 +37043,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Basket%20Barn>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -37017,7 +37180,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/91>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -37276,7 +37441,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/70>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -37628,7 +37795,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Beer%20Market>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -37828,7 +37997,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/320>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -37905,7 +38076,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-18" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -37915,7 +38086,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/458>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -38054,7 +38227,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-15" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -38064,7 +38237,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/293>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -38226,7 +38401,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Asana%20School%20of%20English>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -38550,7 +38727,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/474>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -42260,7 +42439,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/93992277>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -42918,7 +43099,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/184035819>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -43296,7 +43479,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ballinascorney%20Golf%20Club>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -43543,7 +43728,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/219928648>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -43795,7 +43982,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/ActivitiesTypes/Horse%20Riding>
         a       <http://www.semanticweb.org/ontologies/2020/10/ActivityType> ;
@@ -44011,7 +44200,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/311>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -44094,13 +44285,13 @@
         <http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication>
                 0 ;
         <http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId>
-                "45718304" ;
+                "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation>
                 0 ;
         <http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue>
                 0 ;
         <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/16497719>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -44282,7 +44473,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-06" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -44292,7 +44483,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/AWOL%20Paintball%20Games%20%26%20Adventure%20Activities>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -44516,7 +44709,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-16" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -44526,7 +44719,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Belles%20Kitchen>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -44805,7 +45000,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/55002336>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -45927,7 +46124,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/693>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -49002,7 +49201,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-02" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -49012,7 +49211,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/39776728>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -49286,7 +49487,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/187154879>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -49460,7 +49663,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/County/Limerick>
         a       <http://www.semanticweb.org/ontologies/2020/10/County> ;
@@ -49565,7 +49770,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-21" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -49575,7 +49780,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Atlantic%20Sea%20Kayaking>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -49818,7 +50025,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Location/Meath>
         a       <http://www.semanticweb.org/ontologies/2020/10/Location> ;
@@ -50111,7 +50320,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-28" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -50121,7 +50330,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/20997918>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -50397,7 +50608,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Altamont%20Gardens>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -50549,7 +50762,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/169>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -50645,7 +50860,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/272785760>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -50820,7 +51037,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-13" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -50830,7 +51047,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/148>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -53951,7 +54170,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Reviews/383>
         a       <http://www.semanticweb.org/ontologies/2020/10/Review> ;
@@ -54519,7 +54740,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/amenityName>
                 "Private entrance" ;
         <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities>
-                <http://foo.example/Accommodation/45718304> .
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/52>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -55023,7 +55244,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Ardfert%20Cathedral>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -55381,7 +55604,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-03" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -55391,7 +55614,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/43>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -55501,7 +55726,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/124198523>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -55804,7 +56031,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-09" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -55814,7 +56041,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/60747072>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -56048,7 +56277,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/489>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -56191,7 +56422,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-28" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -56201,7 +56432,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/468>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -56388,7 +56621,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/ActivitiesTypes/Shopping%20Centres%20and%20Department%20Store>
         a       <http://www.semanticweb.org/ontologies/2020/10/ActivityType> ;
@@ -56571,7 +56806,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-04" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -56581,7 +56816,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/139>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -56874,7 +57111,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-14" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -56884,7 +57121,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/484>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -57411,7 +57650,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-04-12" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -57421,7 +57660,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/218736839>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -58524,7 +58765,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/209>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -59429,7 +59672,7 @@
 <http://foo.example/RoomType/3>
         a       <http://www.semanticweb.org/ontologies/2020/10/RoomType> ;
         <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType>
-                <http://foo.example/Accommodation/16842803> , <http://foo.example/Accommodation/32519005> , <http://foo.example/Accommodation/19323781> , <http://foo.example/Accommodation/20080880> , <http://foo.example/Accommodation/374792> , <http://foo.example/Accommodation/3581384> , <http://foo.example/Accommodation/33955620> , <http://foo.example/Accommodation/45718304> , <http://foo.example/Accommodation/23691939> , <http://foo.example/Accommodation/37614930> , <http://foo.example/Accommodation/19925329> , <http://foo.example/Accommodation/23769172> , <http://foo.example/Accommodation/30504069> , <http://foo.example/Accommodation/13759419> , <http://foo.example/Accommodation/6850630> , <http://foo.example/Accommodation/14624814> ;
+                <http://foo.example/Accommodation/16842803> , <http://foo.example/Accommodation/32519005> , <http://foo.example/Accommodation/19323781> , <http://foo.example/Accommodation/20080880> , <http://foo.example/Accommodation/374792> , <http://foo.example/Accommodation/3581384> , <http://foo.example/Accommodation/33955620> , <http://foo.example/Accommodation/23691939> , <http://foo.example/Accommodation/37614930> , <http://foo.example/Accommodation/19925329> , <http://foo.example/Accommodation/23769172> , <http://foo.example/Accommodation/43920125> , <http://foo.example/Accommodation/30504069> , <http://foo.example/Accommodation/13759419> , <http://foo.example/Accommodation/6850630> , <http://foo.example/Accommodation/14624814> ;
         <http://www.semanticweb.org/ontologies/2020/10/roomType>
                 "Shared room" ;
         <http://www.semanticweb.org/ontologies/2020/10/roomTypeId>
@@ -60953,7 +61196,7 @@
 <http://foo.example/Location/Dublin>
         a       <http://www.semanticweb.org/ontologies/2020/10/Location> ;
         <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation>
-                <http://foo.example/Accommodation/13759419> , <http://foo.example/Accommodation/11013301> , <http://foo.example/Accommodation/1173029> , <http://foo.example/Accommodation/19925329> , <http://foo.example/Accommodation/19718123> , <http://foo.example/Accommodation/3048852> , <http://foo.example/Accommodation/11211533> , <http://foo.example/Accommodation/23691939> , <http://foo.example/Accommodation/14624814> , <http://foo.example/Accommodation/19323781> , <http://foo.example/Accommodation/45281033> , <http://foo.example/Accommodation/30555175> , <http://foo.example/Accommodation/16842803> , <http://foo.example/Accommodation/37614930> , <http://foo.example/Accommodation/33955620> , <http://foo.example/Accommodation/23721347> , <http://foo.example/Accommodation/44319960> , <http://foo.example/Accommodation/45718304> , <http://foo.example/Accommodation/6850630> , <http://foo.example/Accommodation/3581384> , <http://foo.example/Accommodation/30504069> , <http://foo.example/Accommodation/1276002> , <http://foo.example/Accommodation/45683271> , <http://foo.example/Accommodation/23769172> , <http://foo.example/Accommodation/374792> , <http://foo.example/Accommodation/18349413> , <http://foo.example/Accommodation/20080880> , <http://foo.example/Accommodation/14838168> ;
+                <http://foo.example/Accommodation/13759419> , <http://foo.example/Accommodation/11013301> , <http://foo.example/Accommodation/1173029> , <http://foo.example/Accommodation/19925329> , <http://foo.example/Accommodation/19718123> , <http://foo.example/Accommodation/3048852> , <http://foo.example/Accommodation/11211533> , <http://foo.example/Accommodation/23691939> , <http://foo.example/Accommodation/14624814> , <http://foo.example/Accommodation/19323781> , <http://foo.example/Accommodation/43920125> , <http://foo.example/Accommodation/45281033> , <http://foo.example/Accommodation/30555175> , <http://foo.example/Accommodation/16842803> , <http://foo.example/Accommodation/37614930> , <http://foo.example/Accommodation/33955620> , <http://foo.example/Accommodation/23721347> , <http://foo.example/Accommodation/44319960> , <http://foo.example/Accommodation/6850630> , <http://foo.example/Accommodation/3581384> , <http://foo.example/Accommodation/30504069> , <http://foo.example/Accommodation/1276002> , <http://foo.example/Accommodation/45683271> , <http://foo.example/Accommodation/23769172> , <http://foo.example/Accommodation/374792> , <http://foo.example/Accommodation/18349413> , <http://foo.example/Accommodation/20080880> , <http://foo.example/Accommodation/14838168> ;
         <http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation>
                 <http://foo.example/Activities/Bernard%20Fagan%20Horse%20Drawn%20Carriages> , <http://foo.example/Activities/Bakers%20Corner> , <http://foo.example/Activities/Applied%20Language%20Centre%2C%20University%20College%20Dublin> , <http://foo.example/Activities/ATC%20Language%20%26%20Travel> , <http://foo.example/Activities/Authentic%20Ireland> , <http://foo.example/Activities/AquaZone%20at%20%20the%20National%20Aquatic%20Centre> , <http://foo.example/Activities/Adams%20%26%20Butler> , <http://foo.example/Activities/Beshoffs%20Restaurant> , <http://foo.example/Activities/Belfast%20city%20and%20Titanic%20tour%20-%20Extreme%20Ireland> , <http://foo.example/Activities/Balbriggan%20Fish%20and%20Farmers%20Market> , <http://foo.example/Activities/Arnotts> , <http://foo.example/Activities/Adventure%20Breaks%20Ireland%20Bicycle%20Rental> , <http://foo.example/Activities/Ambassador%20Theatre> , <http://foo.example/Activities/Aircoach> , <http://foo.example/Activities/Adventure%20Breaks%20Ireland%20-%20Segway%20Tour> , <http://foo.example/Activities/Arkland%20Studio> , <http://foo.example/Activities/Beerhouse> , <http://foo.example/Activities/Art%20%26%20Antiques%20Quarter> , <http://foo.example/Activities/Activities%20Ireland> , <http://foo.example/Activities/Alfie%20Byrne%27s> , <http://foo.example/Activities/1916%20Freedom%20Tour> , <http://foo.example/Activities/Accents%20Coffee%20%26%20Tea%20Lounge> , <http://foo.example/Activities/7%20Day%20Treasure%20Ireland%20Tour%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/Beaufield%20Mews> , <http://foo.example/Activities/Airfield%20Estate> , <http://foo.example/Activities/Atlas%20Language%20School> , <http://foo.example/Activities/Baking%20Academy%20of%20Ireland> , <http://foo.example/Activities/Baja%20Bikes> , <http://foo.example/Activities/Balbriggan%20Beach> , <http://foo.example/Activities/365%20Chauffeur%20Drive> , <http://foo.example/Activities/Bella%20Cuba> , <http://foo.example/Activities/Beech%20Park%20Golf%20Club> , <http://foo.example/Activities/Astropark%20Events> , <http://foo.example/Activities/14%20Henrietta%20Street> , <http://foo.example/Activities/Belfast%20%26%20Titanic%20Tour%20-%20Hilltop%20Treks> , <http://foo.example/Activities/Berlitz%20Language%20Centre> , <http://foo.example/Activities/Alfie%27s%20Bar%20and%20Grill> , <http://foo.example/Activities/Artists%20Gift%20Gallery> , <http://foo.example/Activities/Balheary%20Shooting> , <http://foo.example/Activities/An%20Evening%20of%20Food%2C%20Folklore%20and%20Fairies> , <http://foo.example/Activities/Adam%20Ladd%20Tours> , <http://foo.example/Activities/Beer%20Market> , <http://foo.example/Activities/A%20Spasso%20A%20Dublino%20-%20Italian%20Tour%20in%20Dublin> , <http://foo.example/Activities/Alix%20Gardners%20Cookery%20School> , <http://foo.example/Activities/Bar%20Rua> , <http://foo.example/Activities/Balbriggan%20Golf%20Club> , <http://foo.example/Activities/Angling%20Bohernabreena%20Reservoirs> , <http://foo.example/Activities/Beaverstown%20Golf%20Club> , <http://foo.example/Activities/7%20Day%20All%20Ireland%20Rocker%20Tour%20-%20Shamrocker%20Adventures> , <http://foo.example/Activities/3%20Day%20Southern%20Tour%20-%20Shamrocker%20Adventures> , <http://foo.example/Activities/10%20Fleet%20Street%20Restaurant%20%26%20Bar> , <http://foo.example/Activities/BigStyle%20SUP> , <http://foo.example/Activities/Art%20tours%20incl.%20Book%20of%20Kells%3A%20Art%20Impressions> , <http://foo.example/Activities/12%20Henrietta%20Street> , <http://foo.example/Activities/Beaumont%20House> , <http://foo.example/Activities/Baan%20Thai%20Restaurant%20-%20Ballsbridge> , <http://foo.example/Activities/Artzone> , <http://foo.example/Activities/A%20Touch%20of%20Ireland%20Ltd.> , <http://foo.example/Activities/Bang%20Restaurant> , <http://foo.example/Activities/Aboveboard> , <http://foo.example/Activities/Ballymun%20Market> , <http://foo.example/Activities/Ballinascorney%20Golf%20Club> , <http://foo.example/Activities/Alpha%20College%20of%20English> , <http://foo.example/Activities/Ballad%20Tours%20Dublin> , <http://foo.example/Activities/Balcarrick%20Golf%20Club> , <http://foo.example/Activities/Arthur%20Wellesley%20Duke%20Of%20Wellington> , <http://foo.example/Activities/6%20Day%20Northern%20Ireland%20Tour%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/5%20Day%20Celtic%20Rocker%20Tour%20-%20Shamrocker%20Adventures> , <http://foo.example/Activities/Barnageara%20Beach> , <http://foo.example/Activities/1916%20Rebellion%20Walking%20Tours> , <http://foo.example/Activities/Aqua%20Restaurant> , <http://foo.example/Activities/Anglers%20Rest> , <http://foo.example/Activities/8%20Day%20Wild%20Irish%20Rover%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/37%20Dawson%20Street> , <http://foo.example/Activities/Belfast%2C%20Titanic%20%26%20Giants%20Causeway%20-%20Wild%20Rover%20Tours> , <http://foo.example/Activities/Aran%20Islands%20-%202%20Day%20Tour%20Quicktours> , <http://foo.example/Activities/Best%20of%20Irish%20Rock%20%26%20Roll%20Music%20Tour%20-%20LetzGo%20City%20Tours> , <http://foo.example/Activities/11%20Day%20Discover%20Ireland%20Tour%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/Abbey%20Theatre%20Tours> , <http://foo.example/Activities/Ardgillan%20Castle%20and%20Victorian%20Gardens> , <http://foo.example/Activities/Bike%20Hire%20Dublin> , <http://foo.example/Activities/64%20Wine> , <http://foo.example/Activities/Abbey%20Theatre> , <http://foo.example/Activities/Awesome%20Walls%20Climbing%20Centre%20Dublin> , <http://foo.example/Activities/Biddy%27s%20Cottage> , <http://foo.example/Activities/Abbey%20Ireland%20%26%20UK> , <http://foo.example/Activities/Avoca%20Handweavers%20Dublin%20City%20Centre> , <http://foo.example/Activities/12%20Day%20Giant%20Irish%20Adventure%20Tour%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/5%20Day%20Giant%27s%20Rocker%20Tour%20-%20Shamrocker%20Adventures> , <http://foo.example/Activities/Áras%20an%20Uachtaráin> , <http://foo.example/Activities/Alex%20Restaurant> , <http://foo.example/Activities/Arbour%20Hill%20Cemetery> , <http://foo.example/Activities/B%20Bar> , <http://foo.example/Activities/Arran%20Street%20East> , <http://foo.example/Activities/An%20Poitin%20Stil> , <http://foo.example/Activities/Auld%20Dubliner> , <http://foo.example/Activities/Battles%20and%20Barracks> , <http://foo.example/Activities/Arthur%20Griffith> , <http://foo.example/Activities/Best%20of%20Dublin%20Walking%20Tour%20-%20Pat%20Liddy%20Walking%20Tours> , <http://foo.example/Activities/Architectural%20History%20Ireland> , <http://foo.example/Activities/Acapulco%20Dublin> , <http://foo.example/Activities/Aran%20Islands%20Tour%20-%20Railtours%20Ireland%20First%20Class%21> , <http://foo.example/Activities/Arbutus%20Garden%20Tours> , <http://foo.example/Activities/Bad%20Ass%20Cafe> , <http://foo.example/Activities/101%20Talbot> , <http://foo.example/Activities/Balheary%20Open%20Golf%20Course> , <http://foo.example/Activities/Arena%20School%20of%20English> , <http://foo.example/Activities/Adventure%20Rooms%20Dublin> , <http://foo.example/Activities/2019%20Irish%20Harvest%20Festival> , <http://foo.example/Activities/Adelaide%20Road%20Presbyterian%20Church> , <http://foo.example/Activities/3%20Day%20Western%20Rocker%20Tour%20-%20Shamrocker%20Adventures> , <http://foo.example/Activities/Ardgillan%20Demesne> , <http://foo.example/Activities/7%20Day%20World%20Tour%20of%20Ireland%20-%20Vagabond%20Tours%20of%20Ireland> , <http://foo.example/Activities/1916%20Ride%20the%20Revolution%20Rise%20of%20the%20Rebels%20Bus%20Tour%20-%20Hidden%20Dublin%20Walks> , <http://foo.example/Activities/Ashtown%20Stables> , <http://foo.example/Activities/Doyle%20Design%20Dublin> , <http://foo.example/Activities/Ardgillan%20Castle%20Café> , <http://foo.example/Activities/Big%20Smoke%20Writing%20Factory> ;
         <http://www.semanticweb.org/ontologies/2020/10/partOfRegion>
@@ -61059,47 +61302,6 @@
                 10 ;
         <http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue>
                 10 .
-
-<http://foo.example/Accommodation/45718304>
-        a       <http://www.semanticweb.org/ontologies/2020/10/Accommodation> ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates>
-                2 ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription>
-                "1 private bath" ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms>
-                1 ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationBeds>
-                1 ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationDescription>
-                "Self contained en-suite bedroom with private entrance & parking. Newly refurbished so first letting (November 2020). King size bed with TV & WiFi included. Cosy electric heating & large shower. Continental breakfast provided. No cooking facilities available, however fridge in room. <br />Located just off the Drimnagh Road beside main bus routes into the city. 10 mins walk to Our Lady's Hospital (Crumlin Children's Hospital). Maybe suit healthcare staff working night shifts. Very quiet location." ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationId>
-                "45718304" ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable>
-                "false" ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated>
-                "2020-10-21" ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude>
-                53.32201 ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn>
-                <http://foo.example/Location/Dublin> ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude>
-                -6.32556 ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationName>
-                "Self-contained ensuite bedroom with private access" ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy>
-                <http://foo.example/Host/76265474> ;
-        <http://www.semanticweb.org/ontologies/2020/10/accommodationURL>
-                "https://www.airbnb.com/rooms/45718304" ;
-        <http://www.semanticweb.org/ontologies/2020/10/activityLocation>
-                "Dublin" ;
-        <http://www.semanticweb.org/ontologies/2020/10/hasAmenities>
-                <http://foo.example/Amenity/28> , <http://foo.example/Amenity/27> , <http://foo.example/Amenity/25> , <http://foo.example/Amenity/26> ;
-        <http://www.semanticweb.org/ontologies/2020/10/isPropertyType>
-                <http://foo.example/PropertyType/3> ;
-        <http://www.semanticweb.org/ontologies/2020/10/isRoomType>
-                <http://foo.example/RoomType/3> ;
-        <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation>
-                <http://foo.example/AccommodationRating/2> .
 
 <http://foo.example/Amenity/55>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -61379,7 +61581,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-12" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -61389,7 +61591,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/100352031>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -61641,7 +61845,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-06-21" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -61651,7 +61855,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/225940422>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;
@@ -61932,7 +62138,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Activities/Avoca%20Walking%20Tours>
         a       <http://www.semanticweb.org/ontologies/2020/10/Activity> ;
@@ -62220,7 +62428,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-05-10" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -62230,7 +62438,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Amenity/50>
         a       <http://www.semanticweb.org/ontologies/2020/10/Amenity> ;
@@ -62388,7 +62598,7 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice>
                 200.00 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable>
-                "43920125" , false ;
+                false , "43920125" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityDate>
                 "2021-07-07" ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityId>
@@ -62398,7 +62608,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/AccommodationRating/321>
         a       <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> ;
@@ -62445,7 +62657,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Availability/459>
         a       <http://www.semanticweb.org/ontologies/2020/10/Availability> ;
@@ -62594,7 +62808,9 @@
         <http://www.semanticweb.org/ontologies/2020/10/availabilityMin>
                 3 ;
         <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice>
-                200.00 .
+                200.00 ;
+        <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation>
+                <http://foo.example/Accommodation/43920125> .
 
 <http://foo.example/Host/123566519>
         a       <http://www.semanticweb.org/ontologies/2020/10/Host> ;

@@ -776,12 +776,16 @@ owl:topDataProperty rdfs:domain :Availability ;
                                  owl:allValuesFrom :Location
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :accommodationOwnedBy ;
-                                 owl:allValuesFrom :Host
+                                 owl:onProperty :hasAmenities ;
+                                 owl:allValuesFrom :Amenity
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAccommodationRating ;
-                                 owl:allValuesFrom :AccommodationRating
+                                 owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                 owl:allValuesFrom :Availability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasReviews ;
+                                 owl:allValuesFrom :Review
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :isPropertyType ;
@@ -792,19 +796,77 @@ owl:topDataProperty rdfs:domain :Availability ;
                                  owl:allValuesFrom :RoomType
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasAccommodationAvailabilities ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:allValuesFrom :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:allValuesFrom :AccommodationRating
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass :Availability
+                                 owl:onClass :Location
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasAmenities ;
-                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                  owl:onClass :Amenity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Availability
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasReviews ;
                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                  owl:onClass :Review
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :AccommodationRating
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Location
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :AccommodationRating
                                ] .
 
 
@@ -813,18 +875,47 @@ owl:topDataProperty rdfs:domain :Availability ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty :ratesAccommodation ;
                                        owl:allValuesFrom :Accommodation
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Accommodation
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Accommodation
                                      ] .
 
 
 ###  http://www.semanticweb.org/ontologies/2020/10/Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasActivityType ;
-                            owl:someValuesFrom :ActivityType
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:allValuesFrom :Location
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :activityLocatedIn ;
                             owl:allValuesFrom :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityType ;
+                            owl:allValuesFrom :ActivityType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityType ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :ActivityType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Location
                           ] .
 
 
@@ -833,6 +924,11 @@ owl:topDataProperty rdfs:domain :Availability ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasActivities ;
                                 owl:allValuesFrom :Activity
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasActivityType ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ActivityType
                               ] .
 
 
@@ -841,6 +937,11 @@ owl:topDataProperty rdfs:domain :Availability ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :partOfAccommodationAmenities ;
                            owl:allValuesFrom :Accommodation
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :partOfAccommodationAmenities ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Accommodation
                          ] .
 
 
@@ -849,12 +950,26 @@ owl:topDataProperty rdfs:domain :Availability ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasAvailabilitiesForAccommodation ;
                                 owl:allValuesFrom :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
                               ] .
 
 
 ###  http://www.semanticweb.org/ontologies/2020/10/Country
 :Country rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :containsRegions ;
+                           owl:allValuesFrom :County
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :containsRegions ;
                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onClass :County
@@ -868,15 +983,30 @@ owl:topDataProperty rdfs:domain :Availability ;
                           owl:allValuesFrom :Country
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :countyLocatedIn ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Country
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :partOfRegion ;
-                          owl:allValuesFrom :Location
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Location
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :partOfRegion ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Location
                         ] .
 
 
 ###  http://www.semanticweb.org/ontologies/2020/10/Host
 :Host rdf:type owl:Class ;
       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :ownsAccommodation ;
+                        owl:onProperty :accommodationOwnedBy ;
+                        owl:allValuesFrom :Accommodation
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :accommodationOwnedBy ;
                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                         owl:onClass :Accommodation
                       ] .
@@ -885,8 +1015,30 @@ owl:topDataProperty rdfs:domain :Availability ;
 ###  http://www.semanticweb.org/ontologies/2020/10/Location
 :Location rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationLocation ;
+                            owl:allValuesFrom :Accommodation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityLocation ;
+                            owl:allValuesFrom :Activity
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationLocation ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityLocation ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :partOfRegion ;
-                            owl:allValuesFrom :County
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :County
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :partOfRegion ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :County
                           ] .
 
 
@@ -894,7 +1046,11 @@ owl:topDataProperty rdfs:domain :Availability ;
 :PropertyType rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasAccommodationsPropertyType ;
-                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:allValuesFrom :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAccommodationsPropertyType ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                 owl:onClass :Accommodation
                               ] .
 
@@ -904,6 +1060,16 @@ owl:topDataProperty rdfs:domain :Availability ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :reviewAbout ;
                           owl:allValuesFrom :Accommodation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Accommodation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Accommodation
                         ] .
 
 
@@ -911,7 +1077,11 @@ owl:topDataProperty rdfs:domain :Availability ;
 :RoomType rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :hasAccommodationsRoomType ;
-                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:allValuesFrom :Accommodation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationsRoomType ;
+                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                             owl:onClass :Accommodation
                           ] .
 
