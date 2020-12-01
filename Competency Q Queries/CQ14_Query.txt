@@ -1,4 +1,4 @@
-#Where can someone stay to go fishing next summer on 2021-01-18?
+#Where can someone stay to go fishing next summer on 2021-07-18?
 PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
 PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
