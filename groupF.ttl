@@ -1778,11 +1778,6 @@ owl:topDataProperty rdfs:domain :Availability ;
 	] ;
   
   rr:predicateObjectMap [
-		rr:predicate :availabilityAvaliable;
-		rr:objectMap [ rr:column "ACCOMMODATIONID" ]
-	] ;
-  
-  rr:predicateObjectMap [
 		rr:predicate :hasAvailabilitiesForAccommodation ;
 		rr:objectMap [
 			rr:parentTriplesMap <#AccommodationTripleMap>;
