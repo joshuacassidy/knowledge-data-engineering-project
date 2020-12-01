@@ -1,4 +1,4 @@
-#Q6. List "Fishing", "Shopping", "Tour" Activities there are near Airbnbs in Dublin.
+#Q6. List nearby Airbnbs where we have following tourists activities ‘Fishing’, ‘Shopping’, and ‘Tour’ in ‘Dublin’ county?
 PREFIX MostActivity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX County:  <http://www.semanticweb.org/ontologies/2020/10/Location>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -13,4 +13,4 @@ SELECT DISTINCT ?Activities ?airbnblocation WHERE{
     FILTER (?Activities in ("Fishing", "Shopping", "Tour")) 
 }
 GROUP BY ?Activities ?airbnblocation
-LIMIT 100
+LIMIT 75
