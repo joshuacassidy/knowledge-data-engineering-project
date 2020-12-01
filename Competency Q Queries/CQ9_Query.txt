@@ -1,15 +1,14 @@
-#Q9. How many Airbnb property has type 'Bungalows', 'Apartments', and 'guesthouse' are present in 'Galway' county for tourists ?
+#Q9.  What are the name of Activities where there are airbnbs such as 'Bungalows', 'Apartments', and 'guesthouse' in ‘Galway’?
 PREFIX property:<http://www.semanticweb.org/ontologies/2020/10/PropertyType>
 PREFIX activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT DISTINCT ?activitylocation ?propertyType WHERE{
+SELECT DISTINCT ?activityName ?propertyType WHERE{
         ?t <http://www.semanticweb.org/ontologies/2020/10/countyName> "Galway".
-    ?activitylocation <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn>
+    ?activityName <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn>
     <http://foo.example/Location/Galway>.
    ?name <http://www.semanticweb.org/ontologies/2020/10/propertyType> ?propertyType
     FILTER (?propertyType in ("Entire bungalow", "Entire guesthouse", "Entire apartment"))
 }
-GROUP BY ?activitylocation ?propertyType ORDER BY (?propertyType)
-LIMIT 100
+GROUP BY ?activityName ?propertyType ORDER BY (?propertyType)
