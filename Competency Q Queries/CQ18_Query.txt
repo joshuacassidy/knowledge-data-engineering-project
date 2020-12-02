@@ -1,4 +1,4 @@
-#Where can someone stay to go on a fishing holiday for under 2500 euro? (return available dates)
+#Where can someone stay to go on a fishing holiday for under 250 euro? (return available dates)
 PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
 PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
