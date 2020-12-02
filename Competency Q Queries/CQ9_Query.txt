@@ -4,11 +4,12 @@ PREFIX activity:<http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT DISTINCT ?activityName ?propertyType WHERE{
-        ?t <http://www.semanticweb.org/ontologies/2020/10/countyName> "Galway".
-    ?activityName <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn>
-    <http://foo.example/Location/Galway>.
-   ?name <http://www.semanticweb.org/ontologies/2020/10/propertyType> ?propertyType
+SELECT DISTINCT ?accomadationName ?activityName ?propertyType WHERE{
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://foo.example/Location/Galway> .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activityName .
+   	?typeId <http://www.semanticweb.org/ontologies/2020/10/propertyType> ?propertyType . 
+    ?typeId	<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> ?listingId .
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/accommodationName> ?accomadationName .
     FILTER (?propertyType in ("Entire bungalow", "Entire guesthouse", "Entire apartment"))
-}
-GROUP BY ?activityName ?propertyType ORDER BY (?propertyType)
+} limit 50
+#GROUP BY ?accomadationName ?activityName ?propertyType ORDER BY (?propertyType)
