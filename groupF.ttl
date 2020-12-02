@@ -487,8 +487,8 @@ xsd:int owl:equivalentClass xsd:integer .
                                 rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication
-:accommodationRatingComunication rdf:type owl:DatatypeProperty ;
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCommunication
+:accommodationRatingCommunication rdf:type owl:DatatypeProperty ;
                                  rdfs:domain :AccommodationRating ;
                                  rdfs:range xsd:integer .
 
@@ -1687,7 +1687,7 @@ owl:topDataProperty rdfs:domain :Availability ;
 		]
 	] ;
   rr:predicateObjectMap [
-		rr:predicate :accommodationRatingComunication ;
+		rr:predicate :accommodationRatingCommunication ;
 		rr:objectMap [ 
 			rr:column "COMMUNICATION";
 			rr:datatype xsd:integer

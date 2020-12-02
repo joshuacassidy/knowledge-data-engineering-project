@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="header --header">
+    <div class="container center-align">
+        <h1>Search the Knowlege Graph</h1>
+    </div>
+</header>
+
+
+{% if results_set %}
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th class="--table-row">Name</th>
+                <th class="--table-row">URL</th>
+                <th class="--table-row">Activity</th>
+                <th class="--table-row">Location</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for row in results_set -%}
+            <tr>
+                <td class="--table-row">{{ row[0]  }}</td>
+                <td class="--table-row">{{ row[1]  }}</td>
+                <td class="--table-row">{{ row[2]  }}</td>
+                <td class="--table-row">{{ row[3]  }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endif %}
+{% endblock %}

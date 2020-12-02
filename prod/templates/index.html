@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="header" style="background-color: #f5f5f5;padding: 3em 0;margin-bottom: 3em;">
+    <div class="container center-align">
+        <h1>Search the Knowlege Graph</h1>
+    </div>
+</header>
+
+<form action="/query" method="post">
+
+    <div class="container">
+        <div class="card-panel col s12">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="query" name="query" class="materialize-textarea"></textarea>
+                            <label for="query">Query</label>
+                        </div>
+                    </div>
+                </form>
+                <button type="submit" class="right btn waves-effect red lighten-2 waves-light">
+                    Submit Query
+                    <i class="right material-icons">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% if results_set %}
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                {% for row in results_set_vars -%}
+                    <th class="--table-row">{{ row }} </th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for row in results_set -%}
+            <tr>
+                {% for item in row -%}
+                    <td class="--table-row">{{ item  }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endif %}
+{% endblock %}
