@@ -4,11 +4,14 @@ PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT DISTINCT ?amenities ?activity ?activityLocation{
+SELECT DISTINCT ?amenities ?activity ?location{
 	?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Golf> .
 	?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activity .
     ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation . 
+    ?locationId <http://www.semanticweb.org/ontologies/2020/10/partOfRegion> ?activityLocation . 
+    ?locationId <http://www.semanticweb.org/ontologies/2020/10/countyName> ?location . 
     ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation . 
     ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/hasAmenities> ?amenitiesId . 
     ?amenitiesId <http://www.semanticweb.org/ontologies/2020/10/amenityName>?amenities . 
 }
+
