@@ -1,0 +1,17 @@
+#What are the accommodations are available dates to visit "Ardgillan Demesne" where the host has an acceptance rate of 7?
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?hostName ?acceptanceRate ?roomType ?activityLocation {
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> "Ardgillan Demesne" .
+    ?activityId  <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation .
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation .
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/isRoomType> ?roomTypeId .
+    ?roomTypeId <http://www.semanticweb.org/ontologies/2020/10/roomType> ?roomType .
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> ?hostId .
+    ?hostId <http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> ?acceptanceRate .
+    ?hostId <http://www.semanticweb.org/ontologies/2020/10/hostName> ?hostName
+    FILTER (?acceptanceRate >= 70)  
+}
