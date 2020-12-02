@@ -1,0 +1,14 @@
+#What are the amenities offered in accomodations for someone that wishes to visit Golf activity?
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?amenities ?activity ?activityLocation{
+	?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Golf> .
+	?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activity .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation . 
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation . 
+    ?accomodationId <http://www.semanticweb.org/ontologies/2020/10/hasAmenities> ?amenitiesId . 
+    ?amenitiesId <http://www.semanticweb.org/ontologies/2020/10/amenityName>?amenities . 
+}

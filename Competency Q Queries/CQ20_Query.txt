@@ -1,0 +1,20 @@
+# Where can someone go on a fishing holiday for atleast 3 nights? (return the available dates here)
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?accomadationName ?locationName ?activity ?availabilityDate ?availabilityMin{
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Fishing> .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activity .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation .
+    ?locationId <http://www.semanticweb.org/ontologies/2020/10/partOfRegion>?activityLocation .
+    ?locationId <http://www.semanticweb.org/ontologies/2020/10/countyName> ?locationName .
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation . 
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> ?availability .
+    ?availability <http://www.semanticweb.org/ontologies/2020/10/availabilityDate> ?availabilityDate .
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/accommodationName> ?accomadationName .
+    ?availability <http://www.semanticweb.org/ontologies/2020/10/availabilityMin> ?availabilityMin .
+    FILTER(?availabilityMin <= 3)
+} limit 10
+    

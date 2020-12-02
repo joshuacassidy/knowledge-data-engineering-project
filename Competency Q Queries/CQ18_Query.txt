@@ -1,0 +1,18 @@
+#Where can someone stay to go on a fishing holiday for under 250 euro? (return available dates)
+PREFIX HostURL:<http://www.semanticweb.org/ontologies/2020/10/Host>
+PREFIX Activity: <http://www.semanticweb.org/ontologies/2020/10/Activity>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:<http://www.w3.org/2007/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?accomadationName ?availabilityDate ?activity ?price{
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/partOfActivity> <http://foo.example/ActivitiesTypes/Fishing> .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityName> ?activity .
+    ?activityId <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> ?activityLocation .
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> ?activityLocation . 
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> ?availability .
+    ?listingId <http://www.semanticweb.org/ontologies/2020/10/accommodationName> ?accomadationName .
+    ?availability <http://www.semanticweb.org/ontologies/2020/10/availabilityDate> ?availabilityDate .
+    ?availability <http://www.semanticweb.org/ontologies/2020/10/availabilityPrice> ?price .
+    FILTER(?price <= 250.00)
+} limit 200
+    
