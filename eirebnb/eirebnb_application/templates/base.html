@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EireBnB</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <div class="left-align">
+                    <a href="#" data-activates="mobile-demo" class="toggle-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="side-nav" id="mobile-demo" style="transform: translateX(-100%);">
+                        <li><a href="/">Custom Query</a></li>
+                        <li><a href="/room-type-activities">CQ1: Room Type Activities</a></li>
+                        <li><a href="/property-type-activities">CQ2: Property Type Activities</a></li>
+                        <li><a href="/accommodation-activities-beds">CQ3: Accommodation Activities Beds</a></li>
+                        <li><a href="/activity-date-availability">CQ4: Activity Date Availability</a></li>
+                        <li><a href="/accommodation-amenities-activity">CQ5: Accommodation Amenities</a></li>
+                        <li><a href="/activities-rating-communication">CQ6: Rating Communication</a></li>
+                        <li><a href="/activity-host">CQ7: Activity Host</a></li>
+                        <li><a href="/activity-type-price">CQ8: Activity Type Price</a></li>
+                        <li><a href="/activity-acceptance">CQ9: Activity Acceptance</a></li>
+                        <li><a href="/activity-days">CQ10: Activity Days</a></li>
+                        <li><a href="http://0.0.0.0:8000/doc/index-en.html">EireBnB Documentation</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $(".toggle-nav").sideNav();
+        })
+    </script>
+
+</body>
+
+</html>

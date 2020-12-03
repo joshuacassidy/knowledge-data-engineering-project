@@ -1,0 +1,1896 @@
+@prefix : <http://www.semanticweb.org/ontologies/2020/10/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ontologies/2020/10/> .
+
+<http://www.semanticweb.org/ontologies/2020/10/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/r2rml#child
+<http://www.w3.org/ns/r2rml#child> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#class
+<http://www.w3.org/ns/r2rml#class> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#column
+<http://www.w3.org/ns/r2rml#column> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#datatype
+<http://www.w3.org/ns/r2rml#datatype> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#joinCondition
+<http://www.w3.org/ns/r2rml#joinCondition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#logicalTable
+<http://www.w3.org/ns/r2rml#logicalTable> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#objectMap
+<http://www.w3.org/ns/r2rml#objectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#parent
+<http://www.w3.org/ns/r2rml#parent> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#parentTriplesMap
+<http://www.w3.org/ns/r2rml#parentTriplesMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#predicate
+<http://www.w3.org/ns/r2rml#predicate> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#predicateObjectMap
+<http://www.w3.org/ns/r2rml#predicateObjectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#sqlQuery
+<http://www.w3.org/ns/r2rml#sqlQuery> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#subjectMap
+<http://www.w3.org/ns/r2rml#subjectMap> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/r2rml#template
+<http://www.w3.org/ns/r2rml#template> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#int
+xsd:int owl:equivalentClass xsd:integer .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn
+:accommodationLocatedIn rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasAccommodationActivities ,
+                                           :hasAccommodationActivityTypes ;
+                        owl:inverseOf :hasAccommodationLocation ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy
+:accommodationOwnedBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hostAccommedationRating ,
+                                         :hostAmenities ,
+                                         :hostAvailabilties ,
+                                         :hostPropertyType ,
+                                         :hostReviews ,
+                                         :hostRoomType ;
+                      owl:inverseOf :ownsAccommodation ;
+                      rdfs:domain :Accommodation ;
+                      rdfs:range :Host .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn
+:activityLocatedIn rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :activityTypeLocations ,
+                                      :hasActivityAccommodation ,
+                                      :hasActivityTypeAccommodation ,
+                                      :hasActivityTypeAmenity ,
+                                      :hasActivityTypeAvailabilities ,
+                                      :hasActivityTypePropertyType ;
+                   owl:inverseOf :hasActivityLocation ;
+                   rdfs:domain :Activity ;
+                   rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations
+:activityTypeLocations rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :activityTypeLocations ,
+                                          owl:topObjectProperty ;
+                       rdf:type owl:TransitiveProperty ;
+                       rdfs:domain :ActivityType ;
+                       rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/containsRegions
+:containsRegions rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :countyLocatedIn ;
+                 rdfs:domain :Country ;
+                 rdfs:range :County .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn
+:countyLocatedIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain :County ;
+                 rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities
+:hasAccommodationActivities rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            owl:inverseOf :hasActivityAccommodation ;
+                            rdf:type owl:TransitiveProperty ;
+                            rdfs:domain :Accommodation ;
+                            rdfs:range :Activity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes
+:hasAccommodationActivityTypes rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               owl:inverseOf :hasActivityTypeAccommodation ;
+                               rdf:type owl:TransitiveProperty ;
+                               rdfs:domain :Accommodation ;
+                               rdfs:range :ActivityType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities
+:hasAccommodationAvailabilities rdf:type owl:ObjectProperty ;
+                                owl:inverseOf :hasAvailabilitiesForAccommodation ;
+                                rdfs:domain :Accommodation ;
+                                rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation
+:hasAccommodationLocation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasActivityAccommodation ,
+                                             :hasActivityAmenities ,
+                                             :hasActivityAvailability ,
+                                             :hasActivityPropertyType ,
+                                             :hasActivityRoomType ,
+                                             :hasActivityTypeAccommodation ,
+                                             :hasActivityTypeAmenity ,
+                                             :hasActivityTypeAvailabilities ,
+                                             :hasActivityTypePropertyType ,
+                                             :hasActivityTypeRoomType ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating
+:hasAccommodationRating rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :ratesAccommodation ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range :AccommodationRating .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType
+:hasAccommodationsPropertyType rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :isPropertyType ;
+                               rdfs:domain :PropertyType ;
+                               rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType
+:hasAccommodationsRoomType rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :isRoomType ;
+                           rdfs:domain :RoomType ;
+                           rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivities
+:hasActivities rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :activityTypeLocations ,
+                                  :hasActivityTypeAccommodation ,
+                                  :hasActivityTypeAmenity ,
+                                  :hasActivityTypeAvailabilities ,
+                                  :hasActivityTypePropertyType ,
+                                  :hasActivityTypeRoomType ;
+               owl:inverseOf :hasActivityType ;
+               rdfs:domain :ActivityType ;
+               rdfs:range :Activity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation
+:hasActivityAccommodation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdf:type owl:TransitiveProperty ;
+                          rdfs:domain :Activity ;
+                          rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities
+:hasActivityAmenities rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdf:type owl:TransitiveProperty ;
+                      rdfs:domain :Activity ;
+                      rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability
+:hasActivityAvailability rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :Activity ;
+                         rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation
+:hasActivityLocation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasAccommodationActivities ,
+                                        :hasAccommodationActivityTypes ;
+                     rdfs:domain :Activity ;
+                     rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType
+:hasActivityPropertyType rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain :Activity ;
+                         rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType
+:hasActivityRoomType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdf:type owl:TransitiveProperty ;
+                     rdfs:domain :Activity ;
+                     rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityType
+:hasActivityType rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasAccommodationActivityTypes ;
+                 rdfs:domain :Activity ;
+                 rdfs:range :ActivityType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation
+:hasActivityTypeAccommodation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdf:type owl:TransitiveProperty ;
+                              rdfs:domain :ActivityType ;
+                              rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity
+:hasActivityTypeAmenity rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdf:type owl:TransitiveProperty ;
+                        rdfs:domain :ActivityType ;
+                        rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities
+:hasActivityTypeAvailabilities rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdf:type owl:TransitiveProperty ;
+                               rdfs:domain :ActivityType ;
+                               rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType
+:hasActivityTypePropertyType rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdf:type owl:TransitiveProperty ;
+                             rdfs:domain :ActivityType ;
+                             rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType
+:hasActivityTypeRoomType rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :ActivityType ;
+                         rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAmenities
+:hasAmenities rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasActivityAmenities ,
+                                 :hasActivityTypeAmenity ,
+                                 :hostAmenities ;
+              owl:inverseOf :partOfAccommodationAmenities ;
+              rdfs:domain :Accommodation ;
+              rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation
+:hasAvailabilitiesForAccommodation rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :hasActivityAvailability ,
+                                                      :hasActivityTypeAvailabilities ,
+                                                      :hostAvailabilties ;
+                                   rdfs:domain :Availability ;
+                                   rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hasReviews
+:hasReviews rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hostReviews ;
+            owl:inverseOf :reviewAbout ;
+            rdfs:domain :Accommodation ;
+            rdfs:range :Review .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating
+:hostAccommedationRating rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdf:type owl:TransitiveProperty ;
+                         rdfs:domain :Host ;
+                         rdfs:range :AccommodationRating .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAmenities
+:hostAmenities rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Host ;
+               rdfs:range :Amenity .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties
+:hostAvailabilties rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdf:type owl:TransitiveProperty ;
+                   rdfs:domain :Host ;
+                   rdfs:range :Availability .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostPropertyType
+:hostPropertyType rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:TransitiveProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostReviews
+:hostReviews rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain :Host ;
+             rdfs:range :Review .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostRoomType
+:hostRoomType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:domain :Host ;
+              rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/isPropertyType
+:isPropertyType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasActivityPropertyType ,
+                                   :hasActivityTypePropertyType ,
+                                   :hostPropertyType ;
+                rdfs:domain :Accommodation ;
+                rdfs:range :PropertyType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/isRoomType
+:isRoomType rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasActivityRoomType ,
+                               :hasActivityTypeRoomType ,
+                               :hostRoomType ;
+            rdfs:domain :Accommodation ;
+            rdfs:range :RoomType .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation
+:ownsAccommodation rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Host ;
+                   rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities
+:partOfAccommodationAmenities rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Amenity ;
+                              rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/partOfRegion
+:partOfRegion rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :County ;
+              rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation
+:ratesAccommodation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hostAccommedationRating ;
+                    rdfs:domain :AccommodationRating ;
+                    rdfs:range :Accommodation .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewAbout
+:reviewAbout rdf:type owl:ObjectProperty ;
+             rdfs:domain :Review ;
+             rdfs:range :Accommodation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates
+:accommodationAccommodates rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Accommodation ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription
+:accommodationBathroomDescription rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :Accommodation ;
+                                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms
+:accommodationBathrooms rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms
+:accommodationBedrooms rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationBeds
+:accommodationBeds rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accommodation ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationDescription
+:accommodationDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationId
+:accommodationId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Accommodation ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable
+:accommodationInstantBookable rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Accommodation ;
+                              rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated
+:accommodationLastUpdated rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Accommodation ;
+                          rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude
+:accommodationLatitude rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude
+:accommodationLongitude rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationName
+:accommodationName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accommodation ;
+                   rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription
+:accommodationNeighborhoodDescription rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Accommodation ;
+                                      rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRating
+:accommodationRating rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :AccommodationRating ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy
+:accommodationRatingAccuracy rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :AccommodationRating ;
+                             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn
+:accommodationRatingCheckIn rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :AccommodationRating ;
+                            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness
+:accommodationRatingCleanliness rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :AccommodationRating ;
+                                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication
+:accommodationRatingComunication rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :AccommodationRating ;
+                                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId
+:accommodationRatingId rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :AccommodationRating ;
+                       rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation
+:accommodationRatingLocation rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :AccommodationRating ;
+                             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue
+:accommodationRatingValue rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :AccommodationRating ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth
+:accommodationReviewsPerMonth rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Accommodation ;
+                              rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/accommodationURL
+:accommodationURL rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accommodation ;
+                  rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityId
+:activityId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Activity ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLatitude
+:activityLatitude rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Activity ;
+                  rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLocation
+:activityLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Activity ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityLongitude
+:activityLongitude rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Activity ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityName
+:activityName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Activity ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTelephone
+:activityTelephone rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Activity ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityTypeName
+:activityTypeName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ActivityType ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/activityWebsite
+:activityWebsite rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Activity ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/amenityId
+:amenityId rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Amenity ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/amenityName
+:amenityName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Amenity ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice
+:availabilityAdjustedPrice rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Availability ;
+                           rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable
+:availabilityAvaliable rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Availability ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityDate
+:availabilityDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Availability ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityId
+:availabilityId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Availability ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityMax
+:availabilityMax rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Availability ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityMin
+:availabilityMin rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Availability ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/availabilityPrice
+:availabilityPrice rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Country ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyIsCapital
+:countyIsCapital rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :County ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/countyName
+:countyName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :County ;
+            rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAbout
+:hostAbout rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Host ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate
+:hostAcceptanceRate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Host ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostId
+:hostId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Host ;
+        rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost
+:hostIsSuperHost rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Host ;
+                 rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostLocation
+:hostLocation rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Host ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostName
+:hostName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Host ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostPicture
+:hostPicture rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Host ;
+             rdfs:range xsd:hexBinary .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostResponseRate
+:hostResponseRate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostResponseTime
+:hostResponseTime rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Host ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostSince
+:hostSince rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Host ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/hostURL
+:hostURL rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Host ;
+         rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/propertyType
+:propertyType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PropertyType ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/propertyTypeId
+:propertyTypeId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :PropertyType ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/review
+:review rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Review ;
+        rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated
+:reviewDateCreated rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Review ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewId
+:reviewId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Review ;
+          rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/reviewerName
+:reviewerName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Review ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/roomType
+:roomType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RoomType ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/roomTypeId
+:roomTypeId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RoomType ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Availability ;
+                    rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
+                                 owl:allValuesFrom :Location
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAmenities ;
+                                 owl:allValuesFrom :Amenity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                 owl:allValuesFrom :Availability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasReviews ;
+                                 owl:allValuesFrom :Review
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:allValuesFrom :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:allValuesFrom :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:allValuesFrom :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:allValuesFrom :AccommodationRating
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Location
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAmenities ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Amenity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Availability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasReviews ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Review
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :AccommodationRating
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationLocatedIn ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Location
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isPropertyType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :PropertyType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :isRoomType ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :RoomType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ownsAccommodation ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Host
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ratesAccommodation ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :AccommodationRating
+                               ] ;
+               rdfs:comment "An accommodation is a listing or property that is available to rent on a short-term basis on airbnb.com" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/AccommodationRating
+:AccommodationRating rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:allValuesFrom :Accommodation
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Accommodation
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :ratesAccommodation ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Accommodation
+                                     ] ;
+                     rdfs:comment "An accommodation rating is the rating given to a property by a guest indicating their level of satisfaction." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:allValuesFrom :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :activityLocatedIn ;
+                            owl:allValuesFrom :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityType ;
+                            owl:allValuesFrom :ActivityType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Location
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityType ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :ActivityType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :accommodationLocatedIn ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Location
+                          ] ;
+          rdfs:comment "An activity is a generic excursion that is available to do in Ireland." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/ActivityType
+:ActivityType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasActivities ;
+                                owl:allValuesFrom :Activity
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasActivityType ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ActivityType
+                              ] ;
+              rdfs:comment "The activity type classifies the activity into a category." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Amenity
+:Amenity rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :partOfAccommodationAmenities ;
+                           owl:allValuesFrom :Accommodation
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :partOfAccommodationAmenities ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Accommodation
+                         ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Availability
+:Availability rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:allValuesFrom :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAvailabilitiesForAccommodation ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
+                              ] ;
+              rdfs:comment "An amenity is a service available to a guest in an accommodation." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :containsRegions ;
+                           owl:allValuesFrom :County
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :containsRegions ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :County
+                         ] ;
+         rdfs:comment "Country refers to the location where the counties are located." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :countyLocatedIn ;
+                          owl:allValuesFrom :Country
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :countyLocatedIn ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Country
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :partOfRegion ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Location
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :partOfRegion ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Location
+                        ] ;
+        rdfs:comment "Any county in Ireland" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Host
+:Host rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :accommodationOwnedBy ;
+                        owl:allValuesFrom :Accommodation
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :accommodationOwnedBy ;
+                        owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Accommodation
+                      ] ;
+      rdfs:comment "Host is the owner of the accommodation that rents the property to guests." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationLocation ;
+                            owl:allValuesFrom :Accommodation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityLocation ;
+                            owl:allValuesFrom :Activity
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationLocation ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasActivityLocation ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :partOfRegion ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :County
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :partOfRegion ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :County
+                          ] ;
+          rdfs:comment "Location is where the accommodation or activity is based." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/PropertyType
+:PropertyType rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAccommodationsPropertyType ;
+                                owl:allValuesFrom :Accommodation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAccommodationsPropertyType ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Accommodation
+                              ] ;
+              rdfs:comment "PropertyType is the nature of the property, e.g. apartment, house, room." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:allValuesFrom :Accommodation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Accommodation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :reviewAbout ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Accommodation
+                        ] ;
+        rdfs:comment "Review is the comments a guest makes about the host or accommodation that is posted on Airbnb." .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/RoomType
+:RoomType rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationsRoomType ;
+                            owl:allValuesFrom :Accommodation
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasAccommodationsRoomType ;
+                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Accommodation
+                          ] ;
+          rdfs:comment "RoomType is the different types of rooms available to a guest." .
+
+
+###  http://www.w3.org/ns/r2rml#TriplesMap
+<http://www.w3.org/ns/r2rml#TriplesMap> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/10/#AccommodationRatingTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#AccommodationRatingTripleMap> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                              <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM AccommodationRating WHERE 1"
+                                                                                                                        ] ;
+                                                                              <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid60 ,
+                                                                                                                              _:genid62 ,
+                                                                                                                              _:genid64 ,
+                                                                                                                              _:genid66 ,
+                                                                                                                              _:genid68 ,
+                                                                                                                              _:genid70 ,
+                                                                                                                              _:genid72 ,
+                                                                                                                              _:genid75 ,
+                                                                                                                              _:genid77 ;
+                                                                              <http://www.w3.org/ns/r2rml#subjectMap> _:genid79 .
+
+_:genid60 <http://www.w3.org/ns/r2rml#objectMap> _:genid61 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingCleanliness .
+
+_:genid62 <http://www.w3.org/ns/r2rml#objectMap> _:genid63 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingAccuracy .
+
+_:genid64 <http://www.w3.org/ns/r2rml#objectMap> _:genid65 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRating .
+
+_:genid66 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "ACCOMMODATIONID"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingId .
+
+_:genid68 <http://www.w3.org/ns/r2rml#objectMap> _:genid69 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingCheckIn .
+
+_:genid70 <http://www.w3.org/ns/r2rml#objectMap> _:genid71 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingCommunication .
+
+_:genid72 <http://www.w3.org/ns/r2rml#objectMap> _:genid73 ;
+           <http://www.w3.org/ns/r2rml#predicate> :hasAccommodationRating .
+
+_:genid75 <http://www.w3.org/ns/r2rml#objectMap> _:genid76 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingLocation .
+
+_:genid77 <http://www.w3.org/ns/r2rml#objectMap> _:genid78 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationRatingValue .
+
+_:genid79 <http://www.w3.org/ns/r2rml#class> :AccommodationRating ;
+           <http://www.w3.org/ns/r2rml#template> "http://foo.example/AccommodationRating/{ACCOMMODATIONRATINGID}" .
+
+_:genid61 <http://www.w3.org/ns/r2rml#column> "CLEANLINESS" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid63 <http://www.w3.org/ns/r2rml#column> "RATINGACCURACY" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid65 <http://www.w3.org/ns/r2rml#column> "RATING" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid69 <http://www.w3.org/ns/r2rml#column> "CHECKIN" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid71 <http://www.w3.org/ns/r2rml#column> "COMMUNICATION" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid73 <http://www.w3.org/ns/r2rml#joinCondition> _:genid74 ;
+           <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid76 <http://www.w3.org/ns/r2rml#column> "LOCATION" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid78 <http://www.w3.org/ns/r2rml#column> "VALUE" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid74 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+           <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                        <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT ACCOMMODATION.ACCOMMODATIONID as ACCOMMODATIONID, AMENITYJOIN.AMENITYID AS AMENITYIDJ, HOSTID,NAME,DESCRIPTION,LISTINGURL,NEIGHBORHOODOVERVIEW,ACCOMMODATES,LOCATION,BATHROOMS,BATHROOMSTEXT,BEDROOMS,BEDS,INSTANTBOOKABLE,REVIEWSPERMONTH,LATITUDE,LONGITUDE,PROPERTYTYPEID,ROOMTYPEID,LASTUPDATED, AmenityJoin.ACCOMMODATIONID AS ACCOMMODATIONIDJ FROM ACCOMMODATION INNER JOIN AmenityJoin ON ACCOMMODATION.ACCOMMODATIONID = AmenityJoin.ACCOMMODATIONID WHERE 1"
+                                                                                                                  ] ;
+                                                                        <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid81 ,
+                                                                                                                        _:genid83 ,
+                                                                                                                        _:genid85 ,
+                                                                                                                        _:genid87 ,
+                                                                                                                        _:genid89 ,
+                                                                                                                        _:genid91 ,
+                                                                                                                        _:genid93 ,
+                                                                                                                        _:genid95 ,
+                                                                                                                        _:genid97 ,
+                                                                                                                        _:genid99 ,
+                                                                                                                        _:genid101 ,
+                                                                                                                        _:genid103 ,
+                                                                                                                        _:genid105 ,
+                                                                                                                        _:genid107 ,
+                                                                                                                        _:genid109 ,
+                                                                                                                        _:genid111 ,
+                                                                                                                        _:genid113 ,
+                                                                                                                        _:genid116 ,
+                                                                                                                        _:genid119 ,
+                                                                                                                        _:genid122 ,
+                                                                                                                        _:genid125 ,
+                                                                                                                        _:genid128 ,
+                                                                                                                        _:genid131 ,
+                                                                                                                        _:genid134 ;
+                                                                        <http://www.w3.org/ns/r2rml#subjectMap> _:genid137 .
+
+_:genid81 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "ACCOMMODATIONID"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationId .
+
+_:genid83 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "NAME"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationName .
+
+_:genid85 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "DESCRIPTION"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationDescription .
+
+_:genid87 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "LISTINGURL"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationURL .
+
+_:genid89 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "NEIGHBORHOODOVERVIEW"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationNeighborhoodDescription .
+
+_:genid91 <http://www.w3.org/ns/r2rml#objectMap> _:genid92 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationAccommodates .
+
+_:genid93 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "LOCATION"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :activityLocation .
+
+_:genid95 <http://www.w3.org/ns/r2rml#objectMap> _:genid96 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationBathrooms .
+
+_:genid97 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "BATHROOMSTEXT"
+                                                  ] ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationBathroomDescription .
+
+_:genid99 <http://www.w3.org/ns/r2rml#objectMap> _:genid100 ;
+           <http://www.w3.org/ns/r2rml#predicate> :accommodationBedrooms .
+
+_:genid101 <http://www.w3.org/ns/r2rml#objectMap> _:genid102 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationBeds .
+
+_:genid103 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "INSTANTBOOKABLE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationInstantBookable .
+
+_:genid105 <http://www.w3.org/ns/r2rml#objectMap> _:genid106 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationReviewsPerMonth .
+
+_:genid107 <http://www.w3.org/ns/r2rml#objectMap> _:genid108 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationLatitude .
+
+_:genid109 <http://www.w3.org/ns/r2rml#objectMap> _:genid110 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationLongitude .
+
+_:genid111 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "LASTUPDATED"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationLastUpdated .
+
+_:genid113 <http://www.w3.org/ns/r2rml#objectMap> _:genid114 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationOwnedBy .
+
+_:genid116 <http://www.w3.org/ns/r2rml#objectMap> _:genid117 ;
+            <http://www.w3.org/ns/r2rml#predicate> :accommodationLocatedIn .
+
+_:genid119 <http://www.w3.org/ns/r2rml#objectMap> _:genid120 ;
+            <http://www.w3.org/ns/r2rml#predicate> :isPropertyType .
+
+_:genid122 <http://www.w3.org/ns/r2rml#objectMap> _:genid123 ;
+            <http://www.w3.org/ns/r2rml#predicate> :isRoomType .
+
+_:genid125 <http://www.w3.org/ns/r2rml#objectMap> _:genid126 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasReviews .
+
+_:genid128 <http://www.w3.org/ns/r2rml#objectMap> _:genid129 ;
+            <http://www.w3.org/ns/r2rml#predicate> :ratesAccommodation .
+
+_:genid131 <http://www.w3.org/ns/r2rml#objectMap> _:genid132 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAccommodationAvailabilities .
+
+_:genid134 <http://www.w3.org/ns/r2rml#objectMap> _:genid135 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAmenities .
+
+_:genid137 <http://www.w3.org/ns/r2rml#class> :Accommodation ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Accommodation/{ACCOMMODATIONID}" .
+
+_:genid92 <http://www.w3.org/ns/r2rml#column> "ACCOMMODATES" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid96 <http://www.w3.org/ns/r2rml#column> "BATHROOMS" ;
+           <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid100 <http://www.w3.org/ns/r2rml#column> "BEDROOMS" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid102 <http://www.w3.org/ns/r2rml#column> "BEDS" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid106 <http://www.w3.org/ns/r2rml#column> "REVIEWSPERMONTH" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid108 <http://www.w3.org/ns/r2rml#column> "LATITUDE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid110 <http://www.w3.org/ns/r2rml#column> "LONGITUDE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid114 <http://www.w3.org/ns/r2rml#joinCondition> _:genid115 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#HostTripleMap> .
+
+_:genid117 <http://www.w3.org/ns/r2rml#joinCondition> _:genid118 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#LocationTripleMap> .
+
+_:genid120 <http://www.w3.org/ns/r2rml#joinCondition> _:genid121 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#PropertyTypeTripleMap> .
+
+_:genid123 <http://www.w3.org/ns/r2rml#joinCondition> _:genid124 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#RoomTypeTripleMap> .
+
+_:genid126 <http://www.w3.org/ns/r2rml#joinCondition> _:genid127 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#ReviewsTripleMap> .
+
+_:genid129 <http://www.w3.org/ns/r2rml#joinCondition> _:genid130 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationRatingTripleMap> .
+
+_:genid132 <http://www.w3.org/ns/r2rml#joinCondition> _:genid133 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AvailabilityTripleMap> .
+
+_:genid135 <http://www.w3.org/ns/r2rml#joinCondition> _:genid136 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AmenitiesTripleMap> .
+
+_:genid115 <http://www.w3.org/ns/r2rml#child> "HOSTID" ;
+            <http://www.w3.org/ns/r2rml#parent> "HOSTID" .
+
+_:genid118 <http://www.w3.org/ns/r2rml#child> "LOCATION" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTY" .
+
+_:genid121 <http://www.w3.org/ns/r2rml#child> "PROPERTYTYPEID" ;
+            <http://www.w3.org/ns/r2rml#parent> "PROPERTYTYPEID" .
+
+_:genid124 <http://www.w3.org/ns/r2rml#child> "ROOMTYPEID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ROOMTYPEID" .
+
+_:genid127 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+_:genid130 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+_:genid133 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+_:genid136 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONIDJ" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTripleMap> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                     <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT NAME, LONGITUDE,LATITUDE, TELEPHONE, URL, AddressRegion, Activities.ACTIVITYID, ActivitiesJoin.ACTIVITYTYPEID, ActivitiesJoin.ACTIVITYID AS ACTIVITYIDJ FROM Activities INNER JOIN ActivitiesJoin ON Activities.ACTIVITYID = ActivitiesJoin.ACTIVITYID  WHERE 1"
+                                                                                                               ] ;
+                                                                     <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid139 ,
+                                                                                                                     _:genid141 ,
+                                                                                                                     _:genid143 ,
+                                                                                                                     _:genid145 ,
+                                                                                                                     _:genid147 ,
+                                                                                                                     _:genid149 ,
+                                                                                                                     _:genid152 ;
+                                                                     <http://www.w3.org/ns/r2rml#subjectMap> _:genid155 .
+
+_:genid139 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "NAME"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityName .
+
+_:genid141 <http://www.w3.org/ns/r2rml#objectMap> _:genid142 ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityWebsite .
+
+_:genid143 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "TELEPHONE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityTelephone .
+
+_:genid145 <http://www.w3.org/ns/r2rml#objectMap> _:genid146 ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityLongitude .
+
+_:genid147 <http://www.w3.org/ns/r2rml#objectMap> _:genid148 ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityLatitude .
+
+_:genid149 <http://www.w3.org/ns/r2rml#objectMap> _:genid150 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasActivityType .
+
+_:genid152 <http://www.w3.org/ns/r2rml#objectMap> _:genid153 ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityLocatedIn .
+
+_:genid155 <http://www.w3.org/ns/r2rml#class> :Activity ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Activities/{NAME}" .
+
+_:genid142 <http://www.w3.org/ns/r2rml#column> "URL" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:string .
+
+_:genid146 <http://www.w3.org/ns/r2rml#column> "LONGITUDE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid148 <http://www.w3.org/ns/r2rml#column> "LATITUDE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid150 <http://www.w3.org/ns/r2rml#joinCondition> _:genid151 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTypesTripleMap> .
+
+_:genid153 <http://www.w3.org/ns/r2rml#joinCondition> _:genid154 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#LocationTripleMap> .
+
+_:genid151 <http://www.w3.org/ns/r2rml#child> "ACTIVITYIDJ" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACTIVITYID" .
+
+_:genid154 <http://www.w3.org/ns/r2rml#child> "ADDRESSREGION" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTY" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTypesTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTypesTripleMap> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                          <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT ACTIVITYTYPE, ActivitiesTypes.ACTIVITYTYPEID, ActivitiesJoin.ACTIVITYTYPEID as ACTIVITYTYPEIDJ, ActivitiesJoin.ACTIVITYID FROM ActivitiesTypes INNER JOIN ActivitiesJoin ON ActivitiesTypes.ACTIVITYTYPEID = ActivitiesJoin.ACTIVITYTYPEID WHERE 1"
+                                                                                                                    ] ;
+                                                                          <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid157 ,
+                                                                                                                          _:genid160 ;
+                                                                          <http://www.w3.org/ns/r2rml#subjectMap> _:genid162 .
+
+_:genid157 <http://www.w3.org/ns/r2rml#objectMap> _:genid158 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasActivities .
+
+_:genid160 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "ACTIVITYTYPE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :activityTypeName .
+
+_:genid162 <http://www.w3.org/ns/r2rml#class> :ActivityType ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/ActivitiesTypes/{ACTIVITYTYPE}" .
+
+_:genid158 <http://www.w3.org/ns/r2rml#joinCondition> _:genid159 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTripleMap> .
+
+_:genid159 <http://www.w3.org/ns/r2rml#child> "ACTIVITYTYPEIDJ" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACTIVITYTYPEID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#AmenitiesTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#AmenitiesTripleMap> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                    <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT AMENITYJOIN.ACCOMMODATIONID as ACCOMMODATIONID, Amenity.AMENITYID as AMENITYID, Amenity.AMENITY as AMENITY, AMENITYJOIN.AMENITYID AS AMENITYIDJ FROM AMENITY INNER JOIN AMENITYJOIN ON Amenity.AMENITYID = AMENITYJOIN.AMENITYID WHERE 1"
+                                                                                                              ] ;
+                                                                    <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid164 ,
+                                                                                                                    _:genid166 ,
+                                                                                                                    _:genid168 ;
+                                                                    <http://www.w3.org/ns/r2rml#subjectMap> _:genid171 .
+
+_:genid164 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "AMENITYID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :amenityId .
+
+_:genid166 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "AMENITY"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :amenityName .
+
+_:genid168 <http://www.w3.org/ns/r2rml#objectMap> _:genid169 ;
+            <http://www.w3.org/ns/r2rml#predicate> :partOfAccommodationAmenities .
+
+_:genid171 <http://www.w3.org/ns/r2rml#class> :Amenity ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Amenity/{AMENITYID}" .
+
+_:genid169 <http://www.w3.org/ns/r2rml#joinCondition> _:genid170 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid170 <http://www.w3.org/ns/r2rml#child> "AMENITYID" ;
+            <http://www.w3.org/ns/r2rml#parent> "AMENITYIDJ" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#AvailabilityTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#AvailabilityTripleMap> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                       <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Calendar WHERE 1"
+                                                                                                                 ] ;
+                                                                       <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid173 ,
+                                                                                                                       _:genid175 ,
+                                                                                                                       _:genid177 ,
+                                                                                                                       _:genid179 ,
+                                                                                                                       _:genid181 ,
+                                                                                                                       _:genid183 ,
+                                                                                                                       _:genid185 ,
+                                                                                                                       _:genid187 ;
+                                                                       <http://www.w3.org/ns/r2rml#subjectMap> _:genid190 .
+
+_:genid173 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "CALENDERDATE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityDate .
+
+_:genid175 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "AVAILABILITYID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityId .
+
+_:genid177 <http://www.w3.org/ns/r2rml#objectMap> _:genid178 ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityMin .
+
+_:genid179 <http://www.w3.org/ns/r2rml#objectMap> _:genid180 ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityMax .
+
+_:genid181 <http://www.w3.org/ns/r2rml#objectMap> _:genid182 ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityAvaliable .
+
+_:genid183 <http://www.w3.org/ns/r2rml#objectMap> _:genid184 ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityPrice .
+
+_:genid185 <http://www.w3.org/ns/r2rml#objectMap> _:genid186 ;
+            <http://www.w3.org/ns/r2rml#predicate> :availabilityAdjustedPrice .
+
+_:genid187 <http://www.w3.org/ns/r2rml#objectMap> _:genid188 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAvailabilitiesForAccommodation .
+
+_:genid190 <http://www.w3.org/ns/r2rml#class> :Availability ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Availability/{AVAILABILITYID}" .
+
+_:genid178 <http://www.w3.org/ns/r2rml#column> "MINIMUMNIGHTS" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid180 <http://www.w3.org/ns/r2rml#column> "MAXIMUMNIGHTS" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid182 <http://www.w3.org/ns/r2rml#column> "AVAILABLE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:boolean .
+
+_:genid184 <http://www.w3.org/ns/r2rml#column> "PRICE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid186 <http://www.w3.org/ns/r2rml#column> "ADJUSTEDPRICE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:decimal .
+
+_:genid188 <http://www.w3.org/ns/r2rml#joinCondition> _:genid189 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid189 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#CountryTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#CountryTripleMap> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                  <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Counties WHERE 1"
+                                                                                                            ] ;
+                                                                  <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid192 ,
+                                                                                                                  _:genid195 ;
+                                                                  <http://www.w3.org/ns/r2rml#subjectMap> _:genid197 .
+
+_:genid192 <http://www.w3.org/ns/r2rml#objectMap> _:genid193 ;
+            <http://www.w3.org/ns/r2rml#predicate> :containsRegions .
+
+_:genid195 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "COUNTRY"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :countryName .
+
+_:genid197 <http://www.w3.org/ns/r2rml#class> :Country ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Country/{COUNTRY}" .
+
+_:genid193 <http://www.w3.org/ns/r2rml#joinCondition> _:genid194 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#CountyTripleMap> .
+
+_:genid194 <http://www.w3.org/ns/r2rml#child> "COUNTRY" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTRY" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#CountyTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#CountyTripleMap> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                 <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Counties WHERE 1"
+                                                                                                           ] ;
+                                                                 <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid199 ,
+                                                                                                                 _:genid202 ,
+                                                                                                                 _:genid204 ,
+                                                                                                                 _:genid206 ;
+                                                                 <http://www.w3.org/ns/r2rml#subjectMap> _:genid209 .
+
+_:genid199 <http://www.w3.org/ns/r2rml#objectMap> _:genid200 ;
+            <http://www.w3.org/ns/r2rml#predicate> :partOfRegion .
+
+_:genid202 <http://www.w3.org/ns/r2rml#objectMap> _:genid203 ;
+            <http://www.w3.org/ns/r2rml#predicate> :countyIsCapital .
+
+_:genid204 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "COUNTY"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :countyName .
+
+_:genid206 <http://www.w3.org/ns/r2rml#objectMap> _:genid207 ;
+            <http://www.w3.org/ns/r2rml#predicate> :countyLocatedIn .
+
+_:genid209 <http://www.w3.org/ns/r2rml#class> :County ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/County/{COUNTY}" .
+
+_:genid200 <http://www.w3.org/ns/r2rml#joinCondition> _:genid201 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#LocationTripleMap> .
+
+_:genid203 <http://www.w3.org/ns/r2rml#column> "ISCAPITAL" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:boolean .
+
+_:genid207 <http://www.w3.org/ns/r2rml#joinCondition> _:genid208 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#CountryTripleMap> .
+
+_:genid201 <http://www.w3.org/ns/r2rml#child> "COUNTY" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTY" .
+
+_:genid208 <http://www.w3.org/ns/r2rml#child> "COUNTY" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTY" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#HostTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#HostTripleMap> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                               <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Host WHERE 1"
+                                                                                                         ] ;
+                                                               <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid211 ,
+                                                                                                               _:genid213 ,
+                                                                                                               _:genid215 ,
+                                                                                                               _:genid217 ,
+                                                                                                               _:genid219 ,
+                                                                                                               _:genid221 ,
+                                                                                                               _:genid223 ,
+                                                                                                               _:genid225 ,
+                                                                                                               _:genid227 ,
+                                                                                                               _:genid230 ,
+                                                                                                               _:genid232 ;
+                                                               <http://www.w3.org/ns/r2rml#subjectMap> _:genid234 .
+
+_:genid211 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostId .
+
+_:genid213 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTURL"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostURL .
+
+_:genid215 <http://www.w3.org/ns/r2rml#objectMap> _:genid216 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostResponseRate .
+
+_:genid217 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTRESPONSETIME"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostResponseTime .
+
+_:genid219 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTABOUT"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostAbout .
+
+_:genid221 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTNAME"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostName .
+
+_:genid223 <http://www.w3.org/ns/r2rml#objectMap> _:genid224 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostAcceptanceRate .
+
+_:genid225 <http://www.w3.org/ns/r2rml#objectMap> _:genid226 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostIsSuperHost .
+
+_:genid227 <http://www.w3.org/ns/r2rml#objectMap> _:genid228 ;
+            <http://www.w3.org/ns/r2rml#predicate> :ownsAccommodation .
+
+_:genid230 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTSINCE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostSince .
+
+_:genid232 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "HOSTPICTUREURL"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :hostPicture .
+
+_:genid234 <http://www.w3.org/ns/r2rml#class> :Host ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Host/{HOSTID}" .
+
+_:genid216 <http://www.w3.org/ns/r2rml#column> "HOSTRESPONSERATE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid224 <http://www.w3.org/ns/r2rml#column> "HOSTACCEPTANCERATE" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:integer .
+
+_:genid226 <http://www.w3.org/ns/r2rml#column> "HOSTISSUPERHOST" ;
+            <http://www.w3.org/ns/r2rml#datatype> xsd:boolean .
+
+_:genid228 <http://www.w3.org/ns/r2rml#joinCondition> _:genid229 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid229 <http://www.w3.org/ns/r2rml#child> "HOSTID" ;
+            <http://www.w3.org/ns/r2rml#parent> "HOSTID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#LocationTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#LocationTripleMap> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                   <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Counties WHERE 1"
+                                                                                                             ] ;
+                                                                   <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid236 ,
+                                                                                                                   _:genid239 ,
+                                                                                                                   _:genid242 ;
+                                                                   <http://www.w3.org/ns/r2rml#subjectMap> _:genid245 .
+
+_:genid236 <http://www.w3.org/ns/r2rml#objectMap> _:genid237 ;
+            <http://www.w3.org/ns/r2rml#predicate> :partOfRegion .
+
+_:genid239 <http://www.w3.org/ns/r2rml#objectMap> _:genid240 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasActivityLocation .
+
+_:genid242 <http://www.w3.org/ns/r2rml#objectMap> _:genid243 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAccommodationLocation .
+
+_:genid245 <http://www.w3.org/ns/r2rml#class> :Location ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Location/{COUNTY}" .
+
+_:genid237 <http://www.w3.org/ns/r2rml#joinCondition> _:genid238 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#CountyTripleMap> .
+
+_:genid240 <http://www.w3.org/ns/r2rml#joinCondition> _:genid241 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#ActivitiesTripleMap> .
+
+_:genid243 <http://www.w3.org/ns/r2rml#joinCondition> _:genid244 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid238 <http://www.w3.org/ns/r2rml#child> "COUNTY" ;
+            <http://www.w3.org/ns/r2rml#parent> "COUNTY" .
+
+_:genid241 <http://www.w3.org/ns/r2rml#child> "COUNTY" ;
+            <http://www.w3.org/ns/r2rml#parent> "ADDRESSREGION" .
+
+_:genid244 <http://www.w3.org/ns/r2rml#child> "COUNTY" ;
+            <http://www.w3.org/ns/r2rml#parent> "LOCATION" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#PropertyTypeTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#PropertyTypeTripleMap> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                       <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM PropertyType WHERE 1"
+                                                                                                                 ] ;
+                                                                       <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid247 ,
+                                                                                                                       _:genid249 ,
+                                                                                                                       _:genid251 ;
+                                                                       <http://www.w3.org/ns/r2rml#subjectMap> _:genid254 .
+
+_:genid247 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "PROPERTYTYPE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :propertyType .
+
+_:genid249 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "PROPERTYTYPEID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :propertyTypeId .
+
+_:genid251 <http://www.w3.org/ns/r2rml#objectMap> _:genid252 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAccommodationsPropertyType .
+
+_:genid254 <http://www.w3.org/ns/r2rml#class> :PropertyType ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/PropertyType/{PROPERTYTYPEID}" .
+
+_:genid252 <http://www.w3.org/ns/r2rml#joinCondition> _:genid253 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid253 <http://www.w3.org/ns/r2rml#child> "PROPERTYTYPEID" ;
+            <http://www.w3.org/ns/r2rml#parent> "PROPERTYTYPEID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#ReviewsTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#ReviewsTripleMap> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                  <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM Reviews WHERE 1"
+                                                                                                            ] ;
+                                                                  <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid256 ,
+                                                                                                                  _:genid258 ,
+                                                                                                                  _:genid260 ,
+                                                                                                                  _:genid263 ,
+                                                                                                                  _:genid265 ;
+                                                                  <http://www.w3.org/ns/r2rml#subjectMap> _:genid267 .
+
+_:genid256 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "REVIEWERNAME"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :reviewerName .
+
+_:genid258 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "REVIEWID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :reviewId .
+
+_:genid260 <http://www.w3.org/ns/r2rml#objectMap> _:genid261 ;
+            <http://www.w3.org/ns/r2rml#predicate> :reviewAbout .
+
+_:genid263 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "REVIEWDATE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :reviewDateCreated .
+
+_:genid265 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "COMMENTS"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :review .
+
+_:genid267 <http://www.w3.org/ns/r2rml#class> :Review ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/Reviews/{REVIEWID}" .
+
+_:genid261 <http://www.w3.org/ns/r2rml#joinCondition> _:genid262 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid262 <http://www.w3.org/ns/r2rml#child> "ACCOMMODATIONID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ACCOMMODATIONID" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/10/#RoomTypeTripleMap
+<http://www.semanticweb.org/ontologies/2020/10/#RoomTypeTripleMap> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                                   <http://www.w3.org/ns/r2rml#logicalTable> [ <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT * FROM RoomType WHERE 1"
+                                                                                                             ] ;
+                                                                   <http://www.w3.org/ns/r2rml#predicateObjectMap> _:genid269 ,
+                                                                                                                   _:genid272 ,
+                                                                                                                   _:genid274 ;
+                                                                   <http://www.w3.org/ns/r2rml#subjectMap> _:genid276 .
+
+_:genid269 <http://www.w3.org/ns/r2rml#objectMap> _:genid270 ;
+            <http://www.w3.org/ns/r2rml#predicate> :hasAccommodationsRoomType .
+
+_:genid272 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "ROOMTYPEID"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :roomTypeId .
+
+_:genid274 <http://www.w3.org/ns/r2rml#objectMap> [ <http://www.w3.org/ns/r2rml#column> "ROOMTYPE"
+                                                   ] ;
+            <http://www.w3.org/ns/r2rml#predicate> :roomType .
+
+_:genid276 <http://www.w3.org/ns/r2rml#class> :RoomType ;
+            <http://www.w3.org/ns/r2rml#template> "http://foo.example/RoomType/{ROOMTYPEID}" .
+
+_:genid270 <http://www.w3.org/ns/r2rml#joinCondition> _:genid271 ;
+            <http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.semanticweb.org/ontologies/2020/10/#AccommodationTripleMap> .
+
+_:genid271 <http://www.w3.org/ns/r2rml#child> "ROOMTYPEID" ;
+            <http://www.w3.org/ns/r2rml#parent> "ROOMTYPEID" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
