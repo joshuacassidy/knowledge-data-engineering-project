@@ -4,7 +4,7 @@ Names: Claire Farrell, Joshua Cassidy, Yifan Pei, Siddhesh Kankekar
 Student Numbers: 16319148, 20300057, 20303063, 20300810 
 Project Github repository: https://github.com/joshuacassidy/knowledge-data-engineering-project
 
-
+Please examine this project using the GitHub repository.
 WIDICO Documentation: eirebnb/eirebnb_doc
 Application Code: eirebnb/eirebnb_application
 Original Dataset: eirebnb/data
