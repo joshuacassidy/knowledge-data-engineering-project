@@ -1,0 +1,989 @@
+<http://www.semanticweb.org/ontologies/2020/10/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#int
+<http://www.w3.org/2001/XMLSchema#int> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAmenities> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostReviews> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityLocatedInatedIn
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedInatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocatedInatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/containsRegions
+<http://www.semanticweb.org/ontologies/2020/10/containsRegions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/containsRegions> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> .
+<http://www.semanticweb.org/ontologies/2020/10/containsRegions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Country> .
+<http://www.semanticweb.org/ontologies/2020/10/containsRegions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/County> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn
+<http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Country> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationAvailabilities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/isPropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/isRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivities
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/activityTypeLocations> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAccommodation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityType
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationActivityTypes> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAccommodation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAmenities
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAmenities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAmenity> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAmenities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAmenities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityAvailability> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeAvailabilities> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hasReviews
+<http://www.semanticweb.org/ontologies/2020/10/hasReviews> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hasReviews> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostReviews> .
+<http://www.semanticweb.org/ontologies/2020/10/hasReviews> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/ontologies/2020/10/reviewAbout> .
+<http://www.semanticweb.org/ontologies/2020/10/hasReviews> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/hasReviews> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating
+<http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostAmenities
+<http://www.semanticweb.org/ontologies/2020/10/hostAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAmenities> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAmenities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAmenities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties
+<http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAvailabilties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostPropertyType
+<http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostReviews
+<http://www.semanticweb.org/ontologies/2020/10/hostReviews> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostReviews> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostReviews> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostReviews> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostReviews> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostRoomType
+<http://www.semanticweb.org/ontologies/2020/10/hostRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostRoomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostRoomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/isPropertyType
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityPropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypePropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostPropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/isPropertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/isRoomType
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hasActivityTypeRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostRoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/isRoomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation
+<http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities
+<http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+<http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/partOfRegion
+<http://www.semanticweb.org/ontologies/2020/10/partOfRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/partOfRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/partOfRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/partOfRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation
+<http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/ontologies/2020/10/hostAccommedationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/reviewAbout
+<http://www.semanticweb.org/ontologies/2020/10/reviewAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewAbout> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewAbout> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates
+<http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationAccommodates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathroomDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBathrooms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBedrooms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationBeds
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBeds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBeds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationBeds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationDescription
+<http://www.semanticweb.org/ontologies/2020/10/accommodationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationId
+<http://www.semanticweb.org/ontologies/2020/10/accommodationId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable
+<http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationInstantBookable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLastUpdated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLatitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationLongitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationName
+<http://www.semanticweb.org/ontologies/2020/10/accommodationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription
+<http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationNeighborhoodDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRating
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCheckIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingCleanliness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingComunication> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationRatingValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth
+<http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationReviewsPerMonth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/accommodationURL
+<http://www.semanticweb.org/ontologies/2020/10/accommodationURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/accommodationURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityId
+<http://www.semanticweb.org/ontologies/2020/10/activityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityLatitude
+<http://www.semanticweb.org/ontologies/2020/10/activityLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLatitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLatitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityLocation
+<http://www.semanticweb.org/ontologies/2020/10/activityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityLongitude
+<http://www.semanticweb.org/ontologies/2020/10/activityLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLongitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityLongitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityName
+<http://www.semanticweb.org/ontologies/2020/10/activityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityTelephone
+<http://www.semanticweb.org/ontologies/2020/10/activityTelephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTelephone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTelephone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTelephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityTypeName
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/activityTypeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/activityWebsite
+<http://www.semanticweb.org/ontologies/2020/10/activityWebsite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityWebsite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/activityWebsite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/activityWebsite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/amenityId
+<http://www.semanticweb.org/ontologies/2020/10/amenityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/amenityId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+<http://www.semanticweb.org/ontologies/2020/10/amenityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/amenityName
+<http://www.semanticweb.org/ontologies/2020/10/amenityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/amenityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+<http://www.semanticweb.org/ontologies/2020/10/amenityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAdjustedPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityAvaliable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityDate
+<http://www.semanticweb.org/ontologies/2020/10/availabilityDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityId
+<http://www.semanticweb.org/ontologies/2020/10/availabilityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityMax
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityMin
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/availabilityPrice
+<http://www.semanticweb.org/ontologies/2020/10/availabilityPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/availabilityPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/countryName
+<http://www.semanticweb.org/ontologies/2020/10/countryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/countryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Country> .
+<http://www.semanticweb.org/ontologies/2020/10/countryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/countyIsCapital
+<http://www.semanticweb.org/ontologies/2020/10/countyIsCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/countyIsCapital> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/countyIsCapital> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/countyName
+<http://www.semanticweb.org/ontologies/2020/10/countyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/countyName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/countyName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostAbout
+<http://www.semanticweb.org/ontologies/2020/10/hostAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAbout> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAbout> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate
+<http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostAcceptanceRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostId
+<http://www.semanticweb.org/ontologies/2020/10/hostId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost
+<http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostIsSuperHost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostLocation
+<http://www.semanticweb.org/ontologies/2020/10/hostLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostName
+<http://www.semanticweb.org/ontologies/2020/10/hostName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostPicture
+<http://www.semanticweb.org/ontologies/2020/10/hostPicture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPicture> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostPicture> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostResponseRate
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostResponseTime
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostResponseTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostSince
+<http://www.semanticweb.org/ontologies/2020/10/hostSince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostSince> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostSince> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/hostURL
+<http://www.semanticweb.org/ontologies/2020/10/hostURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/hostURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/hostURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/propertyType
+<http://www.semanticweb.org/ontologies/2020/10/propertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/propertyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/propertyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/propertyTypeId
+<http://www.semanticweb.org/ontologies/2020/10/propertyTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/propertyTypeId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/propertyTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/review
+<http://www.semanticweb.org/ontologies/2020/10/review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/review> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/review> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated
+<http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewDateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/reviewId
+<http://www.semanticweb.org/ontologies/2020/10/reviewId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/reviewerName
+<http://www.semanticweb.org/ontologies/2020/10/reviewerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/reviewerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/roomType
+<http://www.semanticweb.org/ontologies/2020/10/roomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/roomType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/roomType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/roomTypeId
+<http://www.semanticweb.org/ontologies/2020/10/roomTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/ontologies/2020/10/roomTypeId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/roomTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.w3.org/2002/07/owl#topDataProperty
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Accommodation
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAmenities> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasReviews> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isPropertyType> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isRoomType> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAmenities> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Amenity> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Availability> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasReviews> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Review> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isPropertyType> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isRoomType> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid17 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isPropertyType> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/PropertyType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/isRoomType> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/RoomType> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ownsAccommodation> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Host> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> .
+<http://www.semanticweb.org/ontologies/2020/10/Accommodation> <http://www.w3.org/2000/01/rdf-schema#comment> "An accommodation is a listing or property that is available to rent on a short-term basis on airbnb.com" .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/AccommodationRating
+<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/ratesAccommodation> .
+_:genid24 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/AccommodationRating> <http://www.w3.org/2000/01/rdf-schema#comment> "An accommodation rating is the rating given to a property by a guest indicating their level of satisfaction." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Activity
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/activityLocatedIn> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivityType> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid28 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivityType> .
+_:genid29 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationLocatedIn> .
+_:genid30 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is a generic excursion that is available to do in Ireland." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/ActivityType
+<http://www.semanticweb.org/ontologies/2020/10/ActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/ActivityType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivities> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/ActivityType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivityType> .
+_:genid32 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/ActivityType> .
+<http://www.semanticweb.org/ontologies/2020/10/ActivityType> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity type classifies the activity into a category." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Amenity
+<http://www.semanticweb.org/ontologies/2020/10/Amenity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Amenity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Amenity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfAccommodationAmenities> .
+_:genid34 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Availability
+<http://www.semanticweb.org/ontologies/2020/10/Availability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Availability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Availability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+_:genid36 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Availability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAvailabilitiesForAccommodation> .
+_:genid37 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Availability> <http://www.w3.org/2000/01/rdf-schema#comment> "An amenity is a service available to a guest in an accommodation." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Country
+<http://www.semanticweb.org/ontologies/2020/10/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/containsRegions> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/containsRegions> .
+_:genid39 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/Country> <http://www.w3.org/2000/01/rdf-schema#comment> "Country refers to the location where the counties are located." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/County
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Country> .
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/countyLocatedIn> .
+_:genid41 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Country> .
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfRegion> .
+_:genid42 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfRegion> .
+_:genid43 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid43 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Location> .
+<http://www.semanticweb.org/ontologies/2020/10/County> <http://www.w3.org/2000/01/rdf-schema#comment> "Any county in Ireland" .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Host
+<http://www.semanticweb.org/ontologies/2020/10/Host> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Host> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Host> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/accommodationOwnedBy> .
+_:genid45 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Host> <http://www.w3.org/2000/01/rdf-schema#comment> "Host is the owner of the accommodation that rents the property to guests." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Location
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Activity> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationLocation> .
+_:genid48 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasActivityLocation> .
+_:genid49 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfRegion> .
+_:genid50 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/partOfRegion> .
+_:genid51 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/County> .
+<http://www.semanticweb.org/ontologies/2020/10/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Location is where the accommodation or activity is based." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/PropertyType
+<http://www.semanticweb.org/ontologies/2020/10/PropertyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/PropertyType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/PropertyType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsPropertyType> .
+_:genid53 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/PropertyType> <http://www.w3.org/2000/01/rdf-schema#comment> "PropertyType is the nature of the property, e.g. apartment, house, room." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/Review
+<http://www.semanticweb.org/ontologies/2020/10/Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/reviewAbout> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/reviewAbout> .
+_:genid55 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/reviewAbout> .
+_:genid56 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/Review> <http://www.w3.org/2000/01/rdf-schema#comment> "Review is the comments a guest makes about the host or accommodation that is posted on Airbnb." .
+# 
+# http://www.semanticweb.org/ontologies/2020/10/RoomType
+<http://www.semanticweb.org/ontologies/2020/10/RoomType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/ontologies/2020/10/RoomType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/RoomType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/ontologies/2020/10/hasAccommodationsRoomType> .
+_:genid58 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/ontologies/2020/10/Accommodation> .
+<http://www.semanticweb.org/ontologies/2020/10/RoomType> <http://www.w3.org/2000/01/rdf-schema#comment> "RoomType is the different types of rooms available to a guest." .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
