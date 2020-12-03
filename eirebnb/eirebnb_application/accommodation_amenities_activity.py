@@ -32,7 +32,7 @@ def accommodation_amenities_activity():
     response_accommodation_amenities_activity = response.json()['results']['bindings']
     
     for i in response_accommodation_amenities_activity:
-        query_results.append((i['amenities']['value'], i['activity']['value'], i['activityLocation']['value'].split("/")[-1].replace(">", ""), i['accomodationId']['value']))
+        query_results.append((i['amenities']['value'], i['activity']['value'], i['activityLocation']['value'].split("/")[-1].replace(">", "")))
     
     
     competency_question_title = "Competency Question 5: Accommodation Amenities Activity"
