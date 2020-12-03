@@ -36,3 +36,4 @@ The following steps detail how to run the project:
 7. Navigate to 0.0.0.0:5000 in your browser to start using the eirebnb ontology.
 
 
+Note: the repository for this project on GitHub does not have the data due to github's file size limits a full version of the project can be found at: https://drive.google.com/file/d/11QrpSco0Mga-vC4aV_QX76DRMVbyutgz/view?usp=sharing
